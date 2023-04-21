@@ -1,0 +1,170 @@
+% ----------------------------------------------------------------------------
+% Vorlage Abschlussarbeit Informatik THM (minimal)
+%
+% Copyright (c) 2016 - 2020 by Burkhardt Renz. All rights reserved.
+% Die Vorlage für eine Abschlussarbeit in der Informatik am Fachbereich
+% MNI der THM ist lizenziert unter einer Creative Commons
+% Namensnennung-Nicht kommerziell 4.0 International Lizenz.
+%
+% $Id: vorlage.tex 979 2020-08-24 07:03:19Z br $
+% ----------------------------------------------------------------------------
+
+\documentclass[%
+	BCOR=8.25mm,         % Bindekorrektur
+	DIV=12,              % Satzspiegel
+	parskip=half,				 % Abstand zwischen Absätzen
+	bibliography=totoc,	 % Literaturverzeichnis im Inhaltsverzeichnis
+	headsepline=on,      % Trennlinie Kolumnentitel
+	]{scrbook}
+
+%% Präambel
+\usepackage[english, ngerman]{babel} % deutsche typogr. Regeln + Trenntabelle
+\usepackage[T1]{fontenc}             % interner TeX-Font-Codierung
+\usepackage{lmodern}                 % Font Latin Modern
+\usepackage[utf8]{inputenc}          % Font-Codierung der Eingabedatei
+\usepackage[babel]{csquotes}         % Anführungszeichen
+\usepackage{graphicx}                % Graphiken
+\usepackage{booktabs}                % Tabellen schöner
+\usepackage{listingsutf8}            % Listings mit Einstellungen
+\lstset{basicstyle=\small\ttfamily,
+	tabsize=2,
+	basewidth={0.5em,0.45em},
+	extendedchars=true}
+\lstset{literate=%                   % Umlaute in Listings
+  {Ö}{{\"O}}1
+  {Ä}{{\"A}}1
+  {Ü}{{\"U}}1
+  {ß}{{\ss}}2
+  {ü}{{\"u}}1
+  {ä}{{\"a}}1
+  {ö}{{\"o}}1
+	{~}{{\textasciitilde}}1} 
+\usepackage{amsmath}	               % Mathematik
+\usepackage[pdftex]{hyperref}       
+\hypersetup{
+	bookmarksopen=true,
+	bookmarksopenlevel=3,
+	colorlinks,
+	citecolor=blue,
+	linkcolor=blue,
+}
+\usepackage{scrhack}								 % unterdrückt Fehlermeldung von listings
+
+%% Nummerierungstiefen
+\setcounter{tocdepth}{3}             % 3 Stufen im Inhaltsverzeichnis
+\setcounter{secnumdepth}{3} 		     % 3 Stufen in Abschnittnummerierung
+
+% ----------------------------------------------------------------------------
+\begin{document}
+
+\frontmatter
+
+%% Titelseite
+\begin{titlepage}
+	\begin{center}
+	\includegraphics[width=0.9\textwidth]{img/mni-logo}
+	
+	\vspace{5cm}	
+
+	\Large\textbf{\sffamily Hauptseminar-Arbeit}
+
+	\vspace{1cm}	
+
+	\huge\textbf{\sffamily Vue.js}
+
+	\normalsize
+	\vspace{1cm}
+
+	Prüfungsleitung des Moduls \\
+	CS1025 Hauptseminar
+
+	von \\[1cm]	
+
+	\textbf{Maximilian Biebl} \\ \texttt{Matrikelnr.: 5323481}\\ [.5cm]
+	am \today
+	\end{center}
+	\vfill
+	\begin{tabular}{ll}
+		Dozent: & Sebastian Süß
+	\end{tabular}
+\end{titlepage}
+\cleardoubleemptypage
+
+%% Erklärung
+\pagestyle{empty}
+\begin{quote}
+	\vspace*{4cm}
+
+	\begin{center}
+		\textbf{\Large\sffamily Eidesstattliche Erklärung}
+	\end{center}
+
+	Hiermit versichere ich, die vorliegende Arbeit selbstständig und unter
+	ausschließlicher Verwendung der angegebenen Literatur und Hilfsmittel
+	erstellt zu haben.
+
+	Die Arbeit wurde bisher in gleicher oder ähnlicher Form keiner anderen
+	Prüfungsbehörde vorgelegt und auch nicht veröffentlicht.
+
+	\vspace{2em}
+
+	Gießen, \today
+\end{quote}
+\cleardoubleemptypage
+
+%% Zusammenfassung
+\pagestyle{empty}
+\begin{quote}
+	\vspace*{4cm}
+
+	\begin{center}
+		\textbf{\Large\sffamily Zusammenfassung}
+	\end{center}
+
+	Dieser Text beschreibt sich in einem gewissen Sinne selbst, nämlich
+	wie die \LaTeX-Dateien aussehen, aus denen dieses Dokument erzeugt wird.
+
+	Es geht also \emph{nicht} darum, wie man eine Abschlussarbeit
+	gliedert, wie man in ihr argumentiert, wie man Konzepte illustriert
+	usw.usf., sondern \emph{nur} darum, wie man das Manuskript der Arbeit
+	in \LaTeX\ setzt. Deshalb ist anzuraten, dieses Dokument parallel mit
+	seinen Quellen zu lesen, die in der Datei \verb=vorlage.zip= enthalten
+	sind.
+
+	Die \LaTeX-Datei basiert auf KOMA-Script von Markus Kohm. KOMA-Script
+	verwendet europäische typografische Konventionen. In aller Regel
+	werden in der Vorlage Standardeinstellungen von KOMA-Skript
+	übernommen. Darüber hinaus wird versucht eine möglichst einfache
+	Vorlage zu erstellen, die leicht an eigene Bedürfnisse angepasst
+	werden kann --- ohne dass man tiefer gehende \LaTeX-Kenntnisse braucht.
+
+	Die Verwendung stelle ich mir so vor: Für die eigene Abschlussarbeit
+	kopiert man \verb=vorlage.tex= und passt die Datei entsprechend an.
+	Für den eigentlichen Inhalt der eigenen Arbeit kann man die anderen
+	\LaTeX-Dateien als Beispiele nehmen.
+	
+\end{quote}
+\cleardoubleemptypage
+
+%% Verzeichnissse
+\tableofcontents
+
+\listoffigures
+\listoftables
+\lstlistoflistings
+
+\mainmatter 
+\pagestyle{headings}
+
+\input{aufbau}
+\input{gliederung}
+\input{elemente}
+
+\backmatter 
+
+\appendix
+\input{install}
+\input{litverz}
+
+\end{document}
+% ----------------------------------------------------------------------------

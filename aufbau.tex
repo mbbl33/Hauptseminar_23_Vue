@@ -1,0 +1,145 @@
+% ----------------------------------------------------------------------------
+% Copyright (c) 2016 - 2020 by Burkhardt Renz. All rights reserved.
+% Die Vorlage für eine Abschlussarbeit in der Informatik am Fachbereich
+% MNI der THM ist lizenziert unter einer Creative Commons
+% Namensnennung-Nicht kommerziell 4.0 International Lizenz.
+%
+% Id:$
+% ----------------------------------------------------------------------------
+
+\chapter{Was ist \LaTeX\ und wie ist eine \LaTeX-Datei aufgebaut?}
+
+Der Text dieses Kapitals steht in der Datei \verb=aufbau.tex=. Die
+Erläuterungen ab Abschnitt \ref{sec:aufbau} beziehen sich auf die Datei
+\verb=vorlage.tex=.
+
+\section{Etwas Geschichte -- oder ein paar Geschichten}
+
+Die ersten Bände von \emph{The Art of Computer Programming}
+(\textsc{TAOCP}) von Donald Knuth wurden im Bleisatz gesetzt. In den
+1970er Jahren aber starb der Bleisatz aus und wurde durch den Fotosatz
+ersetzt. Knuth war mit den damaligen Fotosatz-Systemen sehr unzufrieden,
+weil sie mathematische Formeln nicht gut darstellen konnten. Das brachte
+ihn auf die Idee selbst ein Satzsystem zu entwickeln, das für
+Texte der Mathematik und Informatik typografisch hochwertige Ergebnisse
+erreichen sollte. Zunächst dachte er, ein solches Programm könne in
+einem Jahr oder so erstellt werden. Es dauerte dann doch etwa
+länger -- siehe Tabelle \ref{tbl:geschichte}.\footnote{ Die Entwicklung
+von \TeX\ ist auch ein interessanter Fall von Software-Engineering,
+siehe Donald E. Knuth \emph{The Errors of \TeX} in: Tom de Marco und
+Timothy Lister (Hrsg.) \emph{Software State-of-the-Art: Selected
+Papers} New York NY: Dorste Publishing House, 1990.}
+
+Knuths Idee \cite{knuth99} bestand darin, dass Text, Formeln und Layout
+gewissermaßen programmiert werden. Das Satzsystem konsumiert ein solches
+\enquote{Programm} und macht daraus ein Dokument --- heutzutage in der
+Regel ein PDF-Dokument. Das System sollte natürlich erweiterbar und
+anpassbar sein, weshalb die Sprache, die Knuth entwickelt hat, im Grunde
+eine Makrosprache ist und es deshalb auch erlaubt eigene Befehle zu
+schreiben. Knuth hat einen Satz an Makros entwickelt, den man
+\textsc{Plain}\kern2pt\TeX\ nennt -- diese Makros sind sehr nahe am Kern
+von \TeX, \emph{low level} sozusagen.
+
+Leslie Lamport\footnote{ Leslie Lamport hat wichtige Beiträge zur
+Theorie verteilter Systeme geleistet.} hat eine Menge von Makros
+entwickelt, die auf \TeX\ aufbauen und das Setzen von Büchern, Berichten
+und Artikeln erheblich vereinfachen. Diese Makros nannte er \LaTeX\
+\cite{lamport94}.  Leslie Lamport erzählt über die Entstehung  von
+\LaTeX\
+(\url{http://research.microsoft.com/en-us/um/people/lamport/pubs/pubs.html#latex}):
+
+\begin{quote}
+In the early 80s, I was planning to write the Great American Concurrency
+Book.  I was a \TeX\ user, so I would need a set of macros.  I thought
+that, with a little extra effort, I could make my macros usable by
+others.  Don Knuth had begun issuing early releases of the current
+version of \TeX, and I figured I could write what would become its
+standard macro package.  That was the beginning of \LaTeX. 	\\
+\dots\\
+Meanwhile, I still haven't written the Great American Concurrency
+Book.
+\end{quote}
+
+\LaTeX\ trennt im Grunde die Befehle, die den Inhalt und die Struktur
+eines Texts betreffen von den Befehlen, die für die typografische
+Gestaltung sorgen.  \LaTeX\ stellt eine Reihe von sogenannten
+Dokumentklassen bereit, die das Layout von Artikeln, Berichten, Büchern
+und Briefen bereits enthalten, so dass man sich beim Schreiben nicht
+mehr darum kümmern muss.
+
+Die Dokumentklassen von \LaTeX\ erzeugen eine Typografie, die an
+amerikanischen Konventionen orientiert ist. \textsf{KOMA-Script} ist eine
+Sammlung von Dokumentklassen, die sich an europäischer Typografie
+orientieren. Frank Neukam entwickelte Anfang der 1990er Jahr
+\textsf{Script}, das Markus Kohm zu \textsf{KOMA-Script}
+weiterentwickelte \cite{koma16}. Wir verwenden für die Vorlage die
+Dokumentklasse von \textsf{KOMA-Script} für das Setzen von Büchern.
+
+\section{Der Aufbau einer \LaTeX-Datei}
+\label{sec:aufbau}
+
+Eine \LaTeX-Datei beginnt mit der Angabe der Dokumentklasse mitsamt
+ihren Optionen. Darauf folgt die sogenannte Präambel, in der benötigte
+Pakete angegeben, Einstellungen festgelegt und auch eigene Makros
+definiert werden. Darauf folgt in der Umgebung \verb=document= der
+eigentliche Text.
+
+\subsection{Dokumentklasse}
+
+Wir verwenden für die Abschlussarbeit die Dokumentklasse \verb=scrbook=
+von \textsf{KOMA-Script}. Diese Dokumentklasse ist vorgesehen für den
+Satz von Büchern und sorgt dafür, dass Kapitel immer auf einer rechten
+(also vorderen) Seite beginnen.
+
+Die Dokumentklasse hat in der Regel geeignete Voreinstellungen für eine
+Abschlussarbeit. Deshalb ändern wir nur einige wenige der Optionen von
+\verb=scrbook=. In \cite{partosch15} werden weitere Optionen erläutert.
+
+\subsection{Präambel}
+
+In der Präambel binden wir benötigte Pakete ein.  Pakete sind
+vorgefertigte Sammlungen von Makros für \LaTeX. Es  gibt für nahezu jede
+denkbare Aufgabe solche Pakete, die man im \TeX\ Catalogue
+\url{http://texcatalogue.ctan.org} finden kann.
+
+Unsere Vorlage bindet die wichtigsten und für eine Arbeit im Feld der
+Informatik in der Regel benötigten Pakete ein. Auch hierzu findet man
+weitere Informationen in \cite{partosch15}.
+
+Darüber hinaus stehen Einstellungen in der Präambel, bei uns z.B. zur
+Nummerierungstiefe.
+
+Eigene Makros kann man auch in der Präambel unterbringen.
+
+\subsection{Die Umgebung \texttt{document}}
+
+Nach der Präambel kommt die Umgebung \verb=document=. In \LaTeX\ nennt
+man Blöcke, die durch \verb=\begin{umgebung}= und \verb=\end{umgebung}=
+begrenzt sind \emph{Umgebung}. In der Regel werden zu Beginn der
+Umgebung bestimmte Einstellungen ein- und am Ende der Umgebung wieder
+ausgeschaltet.
+
+Der eigentliche Text der Arbeit steht also in der Klammer
+
+\begin{lstlisting}
+\begin{document}
+
+% hierher kommt der eigentliche Text
+
+\end{document}
+\end{lstlisting}
+
+
+Es ist ratsam, den eigentlichen Text in verschiedene Dateien zu
+verteilen, etwa pro Kapitel eine Datei. Diese Dateien können dann in die
+führende Datei eingebunden werden, bei uns durch folgende Befehle:
+
+\begin{lstlisting}
+
+\input{aufbau}      % Kapitel 1
+\input{gliederung}  % Kapitel 2
+\input{elemente}    % Kapitel 3
+
+\end{lstlisting}
+
+% ----------------------------------------------------------------------------

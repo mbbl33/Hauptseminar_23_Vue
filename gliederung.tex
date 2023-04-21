@@ -1,0 +1,176 @@
+% ----------------------------------------------------------------------------
+% Copyright (c) 2016 -2020 by Burkhardt Renz. All rights reserved.
+% Die Vorlage für eine Abschlussarbeit in der Informatik am Fachbereich
+% MNI der THM ist lizenziert unter einer Creative Commons
+% Namensnennung-Nicht kommerziell 4.0 International Lizenz.
+%
+% Id:$
+% ----------------------------------------------------------------------------
+
+\chapter{Elemente für die Gliederung}
+
+Der Text dieses Kapitels steht in \verb=gliederung.tex=. Er bezieht sich
+auf \verb=vorlage.tex= und \verb=gliederung.tex=.
+
+\section{Teile}
+
+Eine Abschlussarbeit besteht aus drei großen Teilen:
+
+\begin{itemize}
+	\item Dem Vorderteil (\verb=frontmatter=) mit
+		\begin{itemize}
+			\item der Titelseite,
+			\item der eidesstattlichen Erklärung,
+			\item der Zusammenfassung,
+			\item dem Inhaltsverzeichnis und
+			\item den Verzeichnissen von Abbildungen, Tabellen und Listings,
+		\end{itemize}
+	\item dem Hauptteil (\verb=mainmatter=) mit den Kapiteln der Arbeit
+		und
+	\item dem Anhang (\verb=backmatter=) mit Anhängen und dem
+		Literaturverzeichnis	
+\end{itemize}
+
+Manchmal erwarten Dozentinnen oder Dozenten, dass eine Abschlussarbeit
+Verzeichnisse der Abbildungen, Tabellen und Listings oder auch ein Glossar
+der verwendeten Begriffe enthält. Deshalb enthält unsere Vorlage diese
+Verzeichnisse. Ein Glossar kann man mit der Umgebung \verb=description=
+oder \verb=labeling= erzeugen, die in Abschnitt
+\ref{sec:stichwortlisten}  beschrieben werden.
+
+Ich persönlich finde, dass man auf diese Verzeichnisse verzichten kann.
+Und ein Glossar ist meines Erachtens nur nötig, wenn man viele
+Fachbegriffe in der Arbeit verwendet, die einem in der Informatik
+Kundigen nicht geläufig sind.
+
+\section{Kapitel und ihre Untergliederungen}
+
+Die Dokumentklasse \verb=scrbook= hat als Möglichkeiten der Gliederung
+zunächst den Teil (\verb=part=). Er wird in diesem Dokument nicht
+verwendet und meistens ist eine Bachelor- oder Masterarbeit nicht so
+umfangreich, als dass man sie in Teile unterteilen müsste.
+
+Die nächste Ebene ist das Kapital (\verb=chapter=), wie wir auf der
+vorigen Seite den Anfang eines solchen sehen. Kapitel beginnen immer auf
+einer rechten Seite.
+
+Dann kommt der Abschnitt (\verb=section=) --- in einem solchen befinden wir
+uns im Moment.
+
+\subsection{Unterabschnitt}
+
+Dies ist eine \verb=subsection=.
+
+\subsubsection{Unterunterabschnitt}
+
+Jetzt sind wir noch eine Ebene tiefer, in der \verb=subsubsection=. Eine
+Gliederung sollte ausgewogen sein, auch in Bezug auf die
+Gliederungstiefe. Deshalb sollte man eher nicht bis zum
+Unterunterabschnitt gehen.
+
+
+\paragraph{Absatz mit Überschrift}
+
+Dies ist ein Absatz mit Überschrift \verb=paragraph=. Die Überschrift
+wird im Dokument hervorgehoben, hat aber keine eigene Zeile. Typografen
+nennen das auch einen \enquote{Spieß}.
+
+\subparagraph{Unterabsatz}
+
+Dies ist ein Unterabsatz \verb=subparagraph=, auch ein \enquote{Spieß}.
+
+\section{Untergliederungen im Text}
+
+\subsection{Aufzählungen}
+
+Man kann nummerierte Aufzählungen mit der Umgebung \verb=enumerate=
+erzeugen. Dies eignet sich für Aufzählungen, die eine Reihenfolge haben
+und ist oft einer Aneinanderreihung im Text vorzuziehen, weil
+übersichtlicher.
+
+Eine Bachelorarbeit besteht aus
+
+\begin{enumerate}
+	\item einem ersten Kapitel
+		\begin{enumerate}
+			\item einem ersten Abschnitt darin,
+			\item einem zweiten Abschnitt darin,
+		\end{enumerate}
+	\item einem zweiten Kapitel
+	\item usw. usf.	
+\end{enumerate}
+
+Aufzählungen, die keine inhaltliche Reihenfolge haben, kann man mit der
+Umgebung \verb=itemize= darstellen:
+
+\begin{itemize}
+	\item eine wichtige Aussage
+	\item noch eine wichtige Aussage
+		\begin{itemize}
+			\item mit einer Ausprägung
+			\item und noch einer Ausprägung	
+		\end{itemize}
+	\item \dots
+\end{itemize}
+
+\subsection{Stichwortlisten}
+\label{sec:stichwortlisten}
+
+Ein Beispiel für die Umgebung \verb=description= habe ich aus der
+Dokumentation von \textsf{KOMA-Script} übernommen:
+
+\begin{description}
+	\item[empty] ist der Seitenstil, bei dem Kopf- und Fußzeile vollständig 
+		leer bleiben. 
+	\item[plain] ist der Seitenstil, bei dem keinerlei Kolumnentitel verwendet wird. 
+	\item[headings] ist der Seitenstil für automatische Kolumnentitel. 
+	\item[myheadings] ist der Seitenstil für manuelle Kolumnentitel. 
+\end{description}
+
+Es gibt auch noch die Umgebung \verb=labeling=, bei der man durch ein
+Muster angeben kann, wie breit die Einrückung ist. Im Beispiel mit den
+Seitenstilen könnte man das so machen:
+
+\setkomafont{labelinglabel}{\sffamily\bfseries}
+\begin{labeling}{myheadings}
+	\item[empty] ist der Seitenstil, bei dem Kopf- und Fußzeile vollständig 
+		leer bleiben. 
+	\item[plain] ist der Seitenstil, bei dem keinerlei Kolumnentitel verwendet wird. 
+	\item[headings] ist der Seitenstil für automatische Kolumnentitel. 
+	\item[myheadings] ist der Seitenstil für manuelle Kolumnentitel. 
+\end{labeling}
+
+\section{Zum Literaturverzeichnis}
+
+In der Vorlage findet man das Literaturverzeichnis in der Datei
+\verb=litverz.tex=. 
+
+Das Literaturverzeichnis kann man in \LaTeX\ auf zwei Arten erstellen:
+
+Die einfache Variante besteht darin, dass man die Umgebung
+\verb=bibliography= verwendet. So haben wir das in diesem Dokument
+gemacht. Die Angaben zur Literatur stehen in \verb=litverz=. Jeder
+Eintrag hat einen \emph{key}, den wir im Text im Befehl \verb=\cite=
+referenzieren können. Die Referenz wird dann als Nummer im Text
+angegeben und die entsprechende Nummer erscheint auch im
+Literaturverzeichnis.
+
+Die etwas aufwändigere Variante besteht darin, \verb=bibtex= zu
+verwenden. Dies lohnt sich insbesondere dann, wenn man in verschiedenen
+Manuskripte immer wieder dieselben Literaturverweise verwendet.
+
+Mit \verb=bibtex= speichert man die Literaturangaben in einer Art
+Datenbank, einer BibTeX-Datei. Die im Manuskript referenzierten Arbeiten
+werden dann von \verb=bibtex= automatisch in das Literaturverzeichnis
+übernommen. Die Formatierung des Verweises im Text und der Einträge im
+Literaturverzeichnis wird dabei durch eine eigene Datei, dem
+BibTeX-Stil, gesteuert. Will man die Verweise durch Nummern, wählt man
+als Stil \verb=plain=, will man die Verweise durch die Abkürzung des
+Autorennamens mit Angabe des Jahres, wählt man z.B. den Stil
+\verb=alpha=. Es gibt eine Vielzahl solcher BibTeX-Stile, siehe
+\url{https://www.ctan.org/tex-archive/biblio/bibtex/contrib}. Man kann sogar
+eigene BibTeX-Stile definieren mit \verb=tex makebst=.
+
+Mehr über BibTeX findet man z.B. bei \url{https://de.wikibooks.org/wiki/LaTeX-Kompendium:_Zitieren_mit_BibTeX}.
+
+% ----------------------------------------------------------------------------

@@ -1,0 +1,99 @@
+% ----------------------------------------------------------------------------
+% Copyright (c) 2016 - 2020 by Burkhardt Renz. All rights reserved.
+% Die Vorlage für eine Abschlussarbeit in der Informatik am Fachbereich
+% MNI der THM ist lizenziert unter einer Creative Commons
+% Namensnennung-Nicht kommerziell 4.0 International Lizenz.
+%
+% Id:$
+% ----------------------------------------------------------------------------
+
+\chapter{Installation von \LaTeX}
+
+Der Text dieses Anhangs steht in \verb=install.tex=.
+
+\section{Windows}
+
+\subsection*{Installationsschritte}
+
+\begin{enumerate}
+	\item Downloadseite von MiKTeX \url{http://www.miktex.org/download}.
+
+	\item Die Basisversion \textbf{Basic MiKTeX 2.9 Installer} herunterladen.
+
+	\item Die Installationsdatei namens \verb=basic-miktex-2.9.xxxx.exe=  
+		starten.
+		
+	\item Dem Installationswizard folgen (am einfachsten die
+		vorgeschlagenen Werte für Verzeichnisse usw. übernehmen).
+
+	\item	Einen Ordner für die eigenen Dokumente erstellen, z.B. in \emph{Eigene
+Dokumente}.
+
+\end{enumerate}
+
+\subsection*{Erste Schritte mit \TeX works}
+
+\begin{enumerate}
+	\item Im Startmenü oder den Apps das Programm \emph{TeXworks} suchen
+		und starten. Optional: Zur späteren Bequemlichkeit das Programm an die
+		Taskleiste anheften. 
+
+		Es erscheint das Editierfenster auf der linken Hälfte des Bildschirms.
+
+	\item Zum ersten Ausprobieren im Menü \emph{File} den Unterpunkt \emph{New 
+	 	from Template} auswählen und in dem dann erscheinenden Dialog \emph{Basic 
+		LaTeX documents} und \emph{article.tex}
+
+	\item	Die Datei wird im Editorfenster geöffnet. Um daraus das PDF-Dokument
+		zu erstellen drückt man auf den grünen Button links oben.
+
+		Nun öffnet sich ein Dialog zum Abspeichern des Dokuments. Danach:
+
+	\item	Die LaTeX-Datei wird übersetzt. Im linken Fenster unten sieht man die
+		Meldungen über den Fortschritt dieses Vorgangs. (Beim ersten Mal
+		dauert das relativ lange, weil diverse Pakete für LaTeX aus dem
+		Internet heruntergeladen werden.)
+
+	\item	Nach einiger Zeit erscheint das Ergebnis in einem neuen Fenster auf
+		der rechten Seite des Bildschirms.
+
+	\item	Jetzt kann es losgehen: links editieren, Erstellen des Dokuments
+		mit dem grünen Button starten und rechts das Ergebnis überprüfen.
+\end{enumerate}
+
+
+\section{Mac OSX}
+
+\subsection*{Installation von Mac\TeX}
+
+\begin{enumerate}
+	\item Das Package MacTeX.pkg erhältlich bei
+		\url{http://www.tug.org/mactex/} herunterladen.
+	\item Öffnet man das Paket mit Doppelklick, startet die Installation
+		und sie wird schrittweise durchgeführt.	
+\end{enumerate}
+
+\subsection*{Arbeiten mit TeXShop}
+
+Nach der Installation hat man im Launchpad eine App namens TeXShop. Dies
+ist ein Editor für \TeX\ und \LaTeX.
+
+\section{Linux}
+
+Die einfachste Variante besteht darin, eine komplette \TeX
+Live-Installation durchzuführen mittels
+
+\begin{lstlisting}
+sudo apt-get install texlive-full
+\end{lstlisting}
+
+Dabei wird allerdings vieles installiert, das man voraussichtlich
+niemals braucht. Andererseits muss man aber nicht wissen, was man
+mindestens installieren muss, damit \LaTeX\ verwendet werden kann.
+
+Auf Github findet man Skripte, die Installationen z.B. unter Ubuntu
+steuern können. Beispiel:
+\url{https://github.com/scottkosty/install-tl-ubuntu}. Ich habe aber
+keine Ahnung, wie gut diese Skripte tatsächlich sind.
+
+% ----------------------------------------------------------------------------
