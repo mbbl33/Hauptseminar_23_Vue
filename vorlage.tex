@@ -48,7 +48,8 @@
 	citecolor=blue,
 	linkcolor=blue,
 }
-\usepackage{scrhack}								 % unterdrückt Fehlermeldung von listings
+\usepackage{scrhack}
+\usepackage{bugtracker}								 % unterdrückt Fehlermeldung von listings
 
 %% Nummerierungstiefen
 \setcounter{tocdepth}{3}             % 3 Stufen im Inhaltsverzeichnis
@@ -107,6 +108,7 @@
 	Prüfungsbehörde vorgelegt und auch nicht veröffentlicht.
 
 	\vspace{2em}
+	\includegraphics[scale=0.5]{img/signature}
 
 	Gießen, \today
 \end{quote}
@@ -120,28 +122,13 @@
 	\begin{center}
 		\textbf{\Large\sffamily Zusammenfassung}
 	\end{center}
+	Heutzutage ist es standard, dass man mit einer Webseite interagieren kann und sich die Inhalte der Webseite dynamisch anpassen.
+	Eine Webanwendung mit einer komplexen Benutzeroberfläche ohne die Verwendung eines Frontend-Frameworks zu entwickeln, ist aufwendig und fehleranfällig.
+	Zudem besteht ein erhöhtes Risiko von Inkonsistenzen in Bezug auf Inhalt und Qualität, was die spätere Wartung erschwert.
+	Für eine Webanwendung wird in der Regel ein Frontend-Framework verwendet, die aktuell gängigsten dieser Frameworks sind React, Angular und Vue.js.
+	Diese Frontend-Frameworks bilden das Bindeglied zwischen der Logic in JavaScript und der Darstellung in HTML und CSS.
+	In dieser Ausarbeitung möchten wir uns genauer mit dem Framework Vue.js beschäftigen und einen Vergleich zu React und Angular ziehen.
 
-	Dieser Text beschreibt sich in einem gewissen Sinne selbst, nämlich
-	wie die \LaTeX-Dateien aussehen, aus denen dieses Dokument erzeugt wird.
-
-	Es geht also \emph{nicht} darum, wie man eine Abschlussarbeit
-	gliedert, wie man in ihr argumentiert, wie man Konzepte illustriert
-	usw.usf., sondern \emph{nur} darum, wie man das Manuskript der Arbeit
-	in \LaTeX\ setzt. Deshalb ist anzuraten, dieses Dokument parallel mit
-	seinen Quellen zu lesen, die in der Datei \verb=vorlage.zip= enthalten
-	sind.
-
-	Die \LaTeX-Datei basiert auf KOMA-Script von Markus Kohm. KOMA-Script
-	verwendet europäische typografische Konventionen. In aller Regel
-	werden in der Vorlage Standardeinstellungen von KOMA-Skript
-	übernommen. Darüber hinaus wird versucht eine möglichst einfache
-	Vorlage zu erstellen, die leicht an eigene Bedürfnisse angepasst
-	werden kann --- ohne dass man tiefer gehende \LaTeX-Kenntnisse braucht.
-
-	Die Verwendung stelle ich mir so vor: Für die eigene Abschlussarbeit
-	kopiert man \verb=vorlage.tex= und passt die Datei entsprechend an.
-	Für den eigentlichen Inhalt der eigenen Arbeit kann man die anderen
-	\LaTeX-Dateien als Beispiele nehmen.
 	
 \end{quote}
 \cleardoubleemptypage
@@ -156,9 +143,9 @@
 \mainmatter 
 \pagestyle{headings}
 
-\input{aufbau}
-\input{gliederung}
-\input{elemente}
+%\input{aufbau}
+%\input{gliederung}
+%\input{elemente}
 
 \backmatter 
 
