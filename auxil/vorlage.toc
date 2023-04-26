@@ -1,7 +1,9 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {chapter}{\nonumberline Installation von \LaTeX }{1}{chapter*.5}%
-\contentsline {section}{\numberline {1}Windows}{1}{section.Alph0.1}%
-\contentsline {section}{\numberline {2}Mac OSX}{2}{section.Alph0.2}%
-\contentsline {section}{\numberline {3}Linux}{2}{section.Alph0.3}%
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{3}{chapter*.10}%
+\contentsline {chapter}{\numberline {1}Frontend Frameworks}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Etwas Geschichte -- oder ein paar Geschichten}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Der Aufbau einer \LaTeX -Datei}{2}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Dokumentklasse}{2}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Präambel}{2}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Die Umgebung \texttt {document}}{3}{subsection.1.2.3}%
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{5}{chapter*.5}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

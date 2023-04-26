@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.23)  21 APR 2023 12:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.23)  26 APR 2023 10:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1244,57 +1244,84 @@ vorlage.lol)
  [13] [14
 
 
-] (install.tex
-chapter without number
+] (frontend_frameworks.tex
+chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--15
+
+ []
+
+
+LaTeX Warning: Reference `tbl:geschichte' on page 1 undefined on input line 33.
+
+
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 10.
+(Font)              <9> on input line 37.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 10.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 10.
+(Font)              <5> on input line 37.
 [1
 
 
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 85.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 85.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 85.
+ [2]
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 121.
+) [3] [4
 
 
-]) (litverz.tex [2]
+] (litverz.tex
 chapter without number
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 25.
-) [3
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 32.
+) [5
 
 
 ]
 (C:/Users\biebl\OneDrive\UNI\6. Semester\Hauptseminar\Ausarbeitung_Biebl\auxil\
 vorlage.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `vorlage.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 38090 strings out of 476404
- 891408 string characters out of 2789524
- 1858324 words of memory out of 3000000
- 57756 multiletter control sequences out of 15000+600000
- 593830 words of font info for 74 fonts, out of 8000000 for 9000
+ 38137 strings out of 476404
+ 892237 string characters out of 2789524
+ 1863324 words of memory out of 3000000
+ 57791 multiletter control sequences out of 15000+600000
+ 614350 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 133i,11n,133p,10604b,1069s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 133i,11n,133p,10604b,1110s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/biebl/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C
 :/Users/biebl/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}<C
 :/Users/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C
-:/Users/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C
-:/Users/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:
-/Users/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/U
-sers/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/U
-sers/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri8.pfb><C:/Us
-ers/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro10.pfb><C:/Us
-ers/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro8.pfb><C:/Use
-rs/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/U
-sers/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/
-Users/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+:/Users/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><
+C:/Users/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><
+C:/Users/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C
+:/Users/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/
+Users/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Us
+ers/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/User
+s/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/User
+s/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri8.pfb><C:/Users
+/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri9.pfb><C:/Users/
+biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro10.pfb><C:/Users/
+biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro8.pfb><C:/Users/b
+iebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/b
+iebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users
+/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/User
+s/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/User
+s/biebl/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
 Output written on "C:/Users\biebl\OneDrive\UNI\6. Semester\Hauptseminar\Ausarbe
-itung_Biebl\out\vorlage.pdf" (17 pages, 303639 bytes).
+itung_Biebl\out\vorlage.pdf" (19 pages, 453477 bytes).
 PDF statistics:
- 221 PDF objects out of 1000 (max. 8388607)
- 52 named destinations out of 1000 (max. 500000)
- 63 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 275 PDF objects out of 1000 (max. 8388607)
+ 51 named destinations out of 1000 (max. 500000)
+ 79 words of extra memory for PDF output out of 10000 (max. 10000000)
 

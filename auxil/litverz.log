@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.23)  15 APR 2023 17:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2023.1.23)  26 APR 2023 10:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -46,16 +46,16 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.12 \bibitem{lkurz15}
-                      
+l.12 \bibitem{sigdestad22}
+                          
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 litverz.tex:12: Undefined control sequence.
 <argument> \@listctr 
                      
-l.12 \bibitem{lkurz15}
-                      
+l.12 \bibitem{sigdestad22}
+                          
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -65,7 +65,186 @@ and I'll forget about whatever was undefined.
 litverz.tex:12: You can't use `\relax' after \the.
 <recently read> \c@ 
                     
-l.12 \bibitem{lkurz15}
+l.12 \bibitem{sigdestad22}
+                          
+I'm forgetting what you said and using zero instead.
+
+\bibcite{sigdestad22}{0}
+Missing character: There is no T in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no , in font nullfont!
+litverz.tex:15: Undefined control sequence.
+l.15 	\url
+          {https://enonic.com/blog/front-end-frameworks-what-is-important},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (27.09978pt too wide) in paragraph at lines 13--17
+\OT1/cmr/m/it/10 Front-
+ []
+
+
+Overfull \hbox (15.33324pt too wide) in paragraph at lines 13--17
+\OT1/cmr/m/it/10 end
+ []
+
+
+Overfull \hbox (28.23868pt too wide) in paragraph at lines 13--17
+\OT1/cmr/m/it/10 frame-
+ []
+
+
+Overfull \hbox (27.7276pt too wide) in paragraph at lines 13--17
+\OT1/cmr/m/it/10 works:
+ []
+
+
+Overfull \hbox (23.53319pt too wide) in paragraph at lines 13--17
+\OT1/cmr/m/it/10 What
+ []
+
+
+Overfull \hbox (7.15552pt too wide) in paragraph at lines 13--17
+\OT1/cmr/m/it/10 is
+ []
+
+
+Overfull \hbox (14.82213pt too wide) in paragraph at lines 13--17
+\OT1/cmr/m/it/10 im-
+ []
+
+
+Overfull \hbox (17.50542pt too wide) in paragraph at lines 13--17
+\OT1/cmr/m/it/10 por-
+ []
+
+
+Overfull \hbox (17.37766pt too wide) in paragraph at lines 13--17
+\OT1/cmr/m/it/10 tant
+ []
+
+
+Overfull \hbox (20.31651pt too wide) in paragraph at lines 13--17
+\OT1/cmr/m/it/10 right
+ []
+
+
+Overfull \hbox (22.48877pt too wide) in paragraph at lines 13--17
+\OT1/cmr/m/it/10 now?
+ []
+
+
+litverz.tex:19: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 \bibitem{lkurz15}
+                      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+litverz.tex:19: Undefined control sequence.
+<argument> \@listctr 
+                     
+l.19 \bibitem{lkurz15}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+litverz.tex:19: You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.19 \bibitem{lkurz15}
                       
 I'm forgetting what you said and using zero instead.
 
@@ -113,16 +292,16 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no J in font nullfont!
-LaTeX Font Info:    Trying to load font information for +cmr on input line 13.
-LaTeX Font Info:    No file cmr.fd. on input line 13.
+LaTeX Font Info:    Trying to load font information for +cmr on input line 20.
+LaTeX Font Info:    No file cmr.fd. on input line 20.
 
 LaTeX Font Warning: Font shape `/cmr/m/n' undefined
-(Font)              using `/cmr/m/n' instead on input line 13.
+(Font)              using `/cmr/m/n' instead on input line 20.
 
-litverz.tex:13: Corrupted NFSS tables.
+litverz.tex:20: Corrupted NFSS tables.
 wrong@fontshape ...message {Corrupted NFSS tables}
                                                   error@fontshape else let f...
-l.13 ...iel, Patrick Gundlach, Walter Schmidt, Jö
+l.20 ...iel, Patrick Gundlach, Walter Schmidt, Jö
                                                   rg Knappen, Hubert
 This error message was generated by an \errmessage
 command, so I can't give any explicit help.
@@ -131,7 +310,7 @@ and deduce the truth by order and method.
 
 
 LaTeX Font Warning: Font shape `/cmr/m/n' undefined
-(Font)              using `OT1/cmr/m/n' instead on input line 13.
+(Font)              using `OT1/cmr/m/n' instead on input line 20.
 
 Missing character: There is no r in font nullfont!
 Missing character: There is no g in font nullfont!
@@ -167,12 +346,12 @@ Missing character: There is no y in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no a in font nullfont!
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 15.
+(Font)              <7> on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 15.
+(Font)              <5> on input line 22.
 Missing character: There is no , in font nullfont!
-litverz.tex:16: Undefined control sequence.
-l.16 	\url
+litverz.tex:23: Undefined control sequence.
+l.23 	\url
           {http://mirror.unicorncloud.org/CTAN/info/lshort/german/l2kurz.pdf},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -252,36 +431,36 @@ Missing character: There is no 1 in font nullfont!
 Missing character: There is no 5 in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (10.00003pt too wide) in paragraph at lines 13--18
+Overfull \hbox (10.00003pt too wide) in paragraph at lines 20--25
 \/cmr/m/n/10 ^^?o
  []
 
 
-Overfull \hbox (40.89565pt too wide) in paragraph at lines 13--18
+Overfull \hbox (40.89565pt too wide) in paragraph at lines 20--25
 []\OT1/cmr/m/it/10 -
  []
 
 
-Overfull \hbox (75.41055pt too wide) in paragraph at lines 13--18
+Overfull \hbox (75.41055pt too wide) in paragraph at lines 20--25
 \OT1/cmr/m/it/10 Kurzbeschreibung 
  []
 
 
-litverz.tex:18: LaTeX Error: Lonely \item--perhaps a missing list environment.
+litverz.tex:25: LaTeX Error: Lonely \item--perhaps a missing list environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.18 \bibitem{knuth99}
+l.25 \bibitem{knuth99}
                       
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-litverz.tex:18: Undefined control sequence.
+litverz.tex:25: Undefined control sequence.
 <argument> \@listctr 
                      
-l.18 \bibitem{knuth99}
+l.25 \bibitem{knuth99}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -289,10 +468,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-litverz.tex:18: You can't use `\relax' after \the.
+litverz.tex:25: You can't use `\relax' after \the.
 <recently read> \c@ 
                     
-l.18 \bibitem{knuth99}
+l.25 \bibitem{knuth99}
                       
 I'm forgetting what you said and using zero instead.
 
@@ -343,31 +522,31 @@ Missing character: There is no 8 in font nullfont!
 Missing character: There is no 6 in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (16.86655pt too wide) in paragraph at lines 19--23
+Overfull \hbox (16.86655pt too wide) in paragraph at lines 26--30
 \OT1/cmr/m/it/10 The
  []
 
 
-Overfull \hbox (36.7901pt too wide) in paragraph at lines 19--23
+Overfull \hbox (36.7901pt too wide) in paragraph at lines 26--30
 \OT1/cmr/m/it/10 T[]Xbook
  []
 
 
-litverz.tex:23: LaTeX Error: Lonely \item--perhaps a missing list environment.
+litverz.tex:30: LaTeX Error: Lonely \item--perhaps a missing list environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.23 \bibitem{koma16}
+l.30 \bibitem{koma16}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-litverz.tex:23: Undefined control sequence.
+litverz.tex:30: Undefined control sequence.
 <argument> \@listctr 
                      
-l.23 \bibitem{koma16}
+l.30 \bibitem{koma16}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -375,10 +554,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-litverz.tex:23: You can't use `\relax' after \the.
+litverz.tex:30: You can't use `\relax' after \the.
 <recently read> \c@ 
                     
-l.23 \bibitem{koma16}
+l.30 \bibitem{koma16}
                      
 I'm forgetting what you said and using zero instead.
 
@@ -394,10 +573,10 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no m in font nullfont!
 LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <10> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 25.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 32.
 Missing character: There is no , in font nullfont!
-litverz.tex:26: Undefined control sequence.
-l.26 	\url
+litverz.tex:33: Undefined control sequence.
+l.33 	\url
           {http://www.komascript.de/~mkohm/scrguide.pdf}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -454,46 +633,46 @@ Missing character: There is no 1 in font nullfont!
 Missing character: There is no 6 in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (15.21655pt too wide) in paragraph at lines 24--28
+Overfull \hbox (15.21655pt too wide) in paragraph at lines 31--35
 \OT1/cmr/m/it/10 Die
  []
 
 
-Overfull \hbox (16.37766pt too wide) in paragraph at lines 24--28
+Overfull \hbox (16.37766pt too wide) in paragraph at lines 31--35
 \OT1/cmr/m/it/10 An-
  []
 
 
-Overfull \hbox (29.13313pt too wide) in paragraph at lines 24--28
+Overfull \hbox (29.13313pt too wide) in paragraph at lines 31--35
 \OT1/cmr/m/it/10 leitung
  []
 
 
-Overfull \hbox (32.77786pt too wide) in paragraph at lines 24--28
+Overfull \hbox (32.77786pt too wide) in paragraph at lines 31--35
 \OT1/cmss/m/sl/10 KOMA-
  []
 
 
-Overfull \hbox (24.58337pt too wide) in paragraph at lines 24--28
+Overfull \hbox (24.58337pt too wide) in paragraph at lines 31--35
 \OT1/cmss/m/sl/10 Script
  []
 
 
-litverz.tex:28: LaTeX Error: Lonely \item--perhaps a missing list environment.
+litverz.tex:35: LaTeX Error: Lonely \item--perhaps a missing list environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.28 \bibitem{lamport94}
+l.35 \bibitem{lamport94}
                         
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-litverz.tex:28: Undefined control sequence.
+litverz.tex:35: Undefined control sequence.
 <argument> \@listctr 
                      
-l.28 \bibitem{lamport94}
+l.35 \bibitem{lamport94}
                         
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -501,10 +680,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-litverz.tex:28: You can't use `\relax' after \the.
+litverz.tex:35: You can't use `\relax' after \the.
 <recently read> \c@ 
                     
-l.28 \bibitem{lamport94}
+l.35 \bibitem{lamport94}
                         
 I'm forgetting what you said and using zero instead.
 
@@ -566,71 +745,71 @@ Missing character: There is no 9 in font nullfont!
 Missing character: There is no 4 in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (28.57704pt too wide) in paragraph at lines 29--34
+Overfull \hbox (28.57704pt too wide) in paragraph at lines 36--41
 \OT1/cmr/m/it/10 L[]T[]X:
  []
 
 
-Overfull \hbox (5.11108pt too wide) in paragraph at lines 29--34
+Overfull \hbox (5.11108pt too wide) in paragraph at lines 36--41
 \OT1/cmr/m/it/10 a
  []
 
 
-Overfull \hbox (17.88875pt too wide) in paragraph at lines 29--34
+Overfull \hbox (17.88875pt too wide) in paragraph at lines 36--41
 \OT1/cmr/m/it/10 doc-
  []
 
 
-Overfull \hbox (8.94438pt too wide) in paragraph at lines 29--34
+Overfull \hbox (8.94438pt too wide) in paragraph at lines 36--41
 \OT1/cmr/m/it/10 u-
  []
 
 
-Overfull \hbox (21.72208pt too wide) in paragraph at lines 29--34
+Overfull \hbox (21.72208pt too wide) in paragraph at lines 36--41
 \OT1/cmr/m/it/10 ment
  []
 
 
-Overfull \hbox (26.70534pt too wide) in paragraph at lines 29--34
+Overfull \hbox (26.70534pt too wide) in paragraph at lines 36--41
 \OT1/cmr/m/it/10 prepa-
  []
 
 
-Overfull \hbox (12.39433pt too wide) in paragraph at lines 29--34
+Overfull \hbox (12.39433pt too wide) in paragraph at lines 36--41
 \OT1/cmr/m/it/10 ra-
  []
 
 
-Overfull \hbox (17.12212pt too wide) in paragraph at lines 29--34
+Overfull \hbox (17.12212pt too wide) in paragraph at lines 36--41
 \OT1/cmr/m/it/10 tion
  []
 
 
-Overfull \hbox (16.611pt too wide) in paragraph at lines 29--34
+Overfull \hbox (16.611pt too wide) in paragraph at lines 36--41
 \OT1/cmr/m/it/10 sys-
  []
 
 
-Overfull \hbox (16.09988pt too wide) in paragraph at lines 29--34
+Overfull \hbox (16.09988pt too wide) in paragraph at lines 36--41
 \OT1/cmr/m/it/10 tem
  []
 
 
-litverz.tex:34: LaTeX Error: Lonely \item--perhaps a missing list environment.
+litverz.tex:41: LaTeX Error: Lonely \item--perhaps a missing list environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.34 \bibitem{partosch15}
+l.41 \bibitem{partosch15}
                          
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-litverz.tex:34: Undefined control sequence.
+litverz.tex:41: Undefined control sequence.
 <argument> \@listctr 
                      
-l.34 \bibitem{partosch15}
+l.41 \bibitem{partosch15}
                          
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -638,10 +817,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-litverz.tex:34: You can't use `\relax' after \the.
+litverz.tex:41: You can't use `\relax' after \the.
 <recently read> \c@ 
                     
-l.34 \bibitem{partosch15}
+l.41 \bibitem{partosch15}
                          
 I'm forgetting what you said and using zero instead.
 
@@ -660,8 +839,8 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no , in font nullfont!
-litverz.tex:38: Undefined control sequence.
-l.38 	\url
+litverz.tex:45: Undefined control sequence.
+l.45 	\url
           {https://www.staff.uni-giessen.de/partosch/unterlagen/abschlussarb...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -748,121 +927,121 @@ Missing character: There is no 1 in font nullfont!
 Missing character: There is no 5 in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (5.55557pt too wide) in paragraph at lines 35--40
+Overfull \hbox (5.55557pt too wide) in paragraph at lines 42--47
 \/cmr/m/n/10 ^^?u
  []
 
 
-Overfull \hbox (16.37766pt too wide) in paragraph at lines 35--40
+Overfull \hbox (16.37766pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/it/10 An-
  []
 
 
-Overfull \hbox (40.37749pt too wide) in paragraph at lines 35--40
+Overfull \hbox (40.37749pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/it/10 forderun-
  []
 
 
-Overfull \hbox (14.82211pt too wide) in paragraph at lines 35--40
+Overfull \hbox (14.82211pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/it/10 gen
  []
 
 
-Overfull \hbox (10.73328pt too wide) in paragraph at lines 35--40
+Overfull \hbox (10.73328pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/it/10 an
  []
 
 
-Overfull \hbox (17.37767pt too wide) in paragraph at lines 35--40
+Overfull \hbox (17.37767pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/it/10 wis-
  []
 
 
-Overfull \hbox (59.54405pt too wide) in paragraph at lines 35--40
+Overfull \hbox (59.54405pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/it/10 senschaftliche
  []
 
 
-Overfull \hbox (15.35542pt too wide) in paragraph at lines 35--40
+Overfull \hbox (15.35542pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/it/10 Ab-
  []
 
 
-Overfull \hbox (29.3887pt too wide) in paragraph at lines 35--40
+Overfull \hbox (29.3887pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/it/10 schlus-
  []
 
 
-Overfull \hbox (16.99432pt too wide) in paragraph at lines 35--40
+Overfull \hbox (16.99432pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/it/10 sar-
  []
 
 
-Overfull \hbox (25.29979pt too wide) in paragraph at lines 35--40
+Overfull \hbox (25.29979pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/it/10 beiten
  []
 
 
-Overfull \hbox (16.09991pt too wide) in paragraph at lines 35--40
+Overfull \hbox (16.09991pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/it/10 und
  []
 
 
-Overfull \hbox (14.31102pt too wide) in paragraph at lines 35--40
+Overfull \hbox (14.31102pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/it/10 wie
  []
 
 
-Overfull \hbox (11.75548pt too wide) in paragraph at lines 35--40
+Overfull \hbox (11.75548pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/it/10 sie
  []
 
 
-Overfull \hbox (14.56657pt too wide) in paragraph at lines 35--40
+Overfull \hbox (14.56657pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/it/10 mit
  []
 
 
-Overfull \hbox (25.51039pt too wide) in paragraph at lines 35--40
+Overfull \hbox (25.51039pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/it/10 L[]T[]X
  []
 
 
-Overfull \hbox (24.2776pt too wide) in paragraph at lines 35--40
+Overfull \hbox (24.2776pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/it/10 gel^^?ost
  []
 
 
-Overfull \hbox (19.03874pt too wide) in paragraph at lines 35--40
+Overfull \hbox (19.03874pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/it/10 wer-
  []
 
 
-Overfull \hbox (15.33324pt too wide) in paragraph at lines 35--40
+Overfull \hbox (15.33324pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/it/10 den
  []
 
 
-Overfull \hbox (31.17758pt too wide) in paragraph at lines 35--40
+Overfull \hbox (31.17758pt too wide) in paragraph at lines 42--47
 \OT1/cmr/m/it/10 k^^?onnen 
  []
 
 
-litverz.tex:40: LaTeX Error: Lonely \item--perhaps a missing list environment.
+litverz.tex:47: LaTeX Error: Lonely \item--perhaps a missing list environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.40 \bibitem{test23}
+l.47 \bibitem{test23}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-litverz.tex:40: Undefined control sequence.
+litverz.tex:47: Undefined control sequence.
 <argument> \@listctr 
                      
-l.40 \bibitem{test23}
+l.47 \bibitem{test23}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -870,10 +1049,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-litverz.tex:40: You can't use `\relax' after \the.
+litverz.tex:47: You can't use `\relax' after \the.
 <recently read> \c@ 
                     
-l.40 \bibitem{test23}
+l.47 \bibitem{test23}
                      
 I'm forgetting what you said and using zero instead.
 
@@ -892,8 +1071,8 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no , in font nullfont!
-litverz.tex:43: Undefined control sequence.
-l.43     \url
+litverz.tex:50: Undefined control sequence.
+l.50     \url
              {https://googl.de},
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -924,23 +1103,23 @@ Missing character: There is no 2 in font nullfont!
 Missing character: There is no 3 in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (14.70546pt too wide) in paragraph at lines 41--45
+Overfull \hbox (14.70546pt too wide) in paragraph at lines 48--52
 \OT1/cmr/m/it/10 Bib
  []
 
 
-Overfull \hbox (28.62201pt too wide) in paragraph at lines 41--45
+Overfull \hbox (28.62201pt too wide) in paragraph at lines 48--52
 \OT1/cmr/m/it/10 Testen
  []
 
 
-litverz.tex:46: LaTeX Error: \begin{document} ended by \end{thebibliography}.
+litverz.tex:53: LaTeX Error: \begin{document} ended by \end{thebibliography}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.46 \end{thebibliography}
+l.53 \end{thebibliography}
                           
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -960,5 +1139,5 @@ Here is how much of TeX's memory you used:
  20500 multiletter control sequences out of 15000+600000
  513338 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 23i,4n,32p,123b,145s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 23i,4n,32p,123b,146s stack positions out of 10000i,1000n,20000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!
