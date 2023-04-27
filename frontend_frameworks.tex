@@ -10,7 +10,7 @@
 \chapter{Frontend Frameworks}
 
 In diesem Kapitel möchte ich zunächst allgemein in die JavaScript-Frontend-Frameworks einführen.
-Die Drei aktuell gängigsten Frontend-Frameworks React.js, Angular und Vue.js werden vorgestellt.
+Die Drei aktuell gängigsten Frontend-Frameworks React, Angular und Vue.js werden vorgestellt.
 \\
 An eine moderne Webapplikation werden hohe Anforderungen an den Funktionsumfang durch den Benutzer gestellt.
 Die Entwickler einer solchen Webapplikation erwarten eine einheitliche Codequalität und einheitliche Strukturen
@@ -24,31 +24,43 @@ werden unter anderem entsprechende Frontend Frameworks verwendet.
 \end{quote}
 Man kann zwischen UI-Frameworks in HTML und CSS sowie JavaScript-Frameworks unterscheiden.
 Letztere dienen als Verbindung zwischen der Darstellung und der Logik im Frontend.
+Aus den Statistiken \ref{fig:stackoverflow_stat} und \ref{fig:google_trends} lässt sich schließen,
+dass die Drei aktuell gängigsten dieser JavaScript-Frameworks React, Angular und Vue.js sind.
 
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=0.8\textwidth]{img/js_frameworks_statistic_stackoverflow}
-    \caption{Stackoverflow Statistik zur Häufigkeit von nach Framework}
+    \caption{Stackoverflow Statistik zur Häufigkeit von Fragen nach Framework \cite{stackoverflowStats}}
     \label{fig:stackoverflow_stat}
-\end{figure}
-
-
-\begin{figure}[!htb]
-    \centering
-    \includegraphics[width=0.8\textwidth]{img/Google Stats/2023-04-26 12_20_26-React, Angular, AngularJS, Vue.js, Backbone.js - Erkunden - Google Trends}
-    \caption{Googlge Trends Weltweiteverteilung von Suchanfragen nache Framework der letzten 5 Jahre}
-    \label{fig:google_trends_world}
 \end{figure}
 
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=0.8\textwidth]{img/Google Stats/google_frameworks_trends}
-    \caption{Googlge Trends zur Häufigkeit von Suchanfragen nache Framework der letzten 5 Jahre}
+    \caption{Googlge Trends zur Häufigkeit von Suchanfragen nach Frameworks der letzten 5 Jahre \cite{googleTrends}}
     \label{fig:google_trends}
 \end{figure}
 
-%https://trends.google.de/trends/explore/GEO_MAP/1682502600?hl=de&tz=-120&date=today+5-y&hl=de&q=%2Fm%2F012l1vxv,%2Fg%2F11c6w0ddw9,%2Fm%2F0j45p7w,%2Fg%2F11c0vmgx5d,%2Fm%2F0h94450&sni=3
-%https://insights.stackoverflow.com/trends?tags=reactjs%2Cangular%2Cvue.js%2Cember.js%2Cbackbone.js%2Cknockout.js%2Cangularjs
+%\begin{figure}[!htb]
+%    \centering
+%    \includegraphics[width=0.8\textwidth]{img/Google Stats/2023-04-26 12_20_26-React, Angular, AngularJS, Vue.js, Backbone.js - Erkunden - Google Trends}
+%    \caption{Googlge Trends Weltweiteverteilung von Suchanfragen nach Frameworks der letzten 5 Jahre \cite{googleTrends}}
+%    \label{fig:google_trends_world}
+%\end{figure}
+
+\section{React}
+Das laut Statistik gefragteste Frontend Framework ist aktuell React.\cite{googleTrends} \cite{stackoverflowStats}
+React wurde von Facebook entwickelt und 2013 veröffentlicht.
+Das Ziel bestand darin, ein Framework zu entwickeln,
+das den Anforderungen an Skalierbarkeit und Wartbarkeit gerecht wird,
+wie sie für eine umfangreiche Webapplikation wie Facebook erforderlich sind. \cite[S. 1]{gackenheimer2015introduction}
+React setzt dabei auf \emph{JavaScript syntax extension} (JSX) was einen hybriden Code aus JavaScript und HTML-Elementen ermöglicht. \cite{react}
+
+\section{Angular}
+Angular wurde von Google entwickelt und erschien 2016 ursprünglich als \emph{AngularJs 2.0},
+dabei handelt sich um eine vollständige Neuimplementierung in TypeScript unabhängig der Codebasis des Vorgängers AngularJs. \cite[S. 209-210]{bin2019}
+Nach Google Trends und Stackoverflow Statistiken ist es aktuell das zweitbeliebteste
+Frontend Framework. \cite{googleTrends} \cite{stackoverflowStats}
 \section{Etwas Geschichte -- oder ein paar Geschichten}
 
 Die ersten Bände von \emph{The Art of Computer Programming}
