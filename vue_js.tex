@@ -3,8 +3,8 @@
 
 \chapter{Vue.js}
 In diesem Kapitel möchte ich genauer auf Vue.js eingehen.
-Dabei möchte ich ausführlich auf Vue.js und seine Ziele eingehen.
-Weiterhin möchte ich auf die Historie und Meilensteine in der Entwicklung von Vue.js erläutern.
+Dabei möchte ich Vue.js und seine Ziele erläutern.
+Weiterhin möchte ich auf die Historie und Meilensteine in der Entwicklung von Vue.js eingehen.
 
 
 \section{Was ist Vue.js?}
@@ -14,9 +14,9 @@ dass es sich an die Bedürfnisse der Entwickler anpassen lässt.
 Der Kern von Vue kümmert sich ausschließlich um den View-Layer und ist rund 20 KB groß.
 Für weitere benötigte Features kann Vue.js modular erweitert werden. \cite[S. 523-524]{bin2019}
 \\
-Das Konzept von Vue ermöglicht es Vue in bestehende Projekte integriert zu werden
-und soll es leichter machen ein Projekt
-schrittweise von anderen Frameworks zu Vue.js migrieren zulassen  \cite[S. 1]{peterke2019}.
+Das Konzept von Vue ermöglicht es, Vue in bestehende Projekte zu integrieren
+und soll es leichter machen, ein Projekt
+schrittweise von anderen Frameworks zu Vue.js migrieren zulassen \cite[S. 1]{peterke2019}.
 
 \section{Geschichte}
 
@@ -43,4 +43,9 @@ Zudem ist das Framework zu starr, um schnell auf Änderungen und neue Anforderun
 Die erste Vollversion wurde im Oktober 2015 veröffentlicht.
 Bei der 2016 veröffentlichten Version v2.0 handelt es sich um eine von Grund auf Neuimplementierung. \cite[1:11-4:42]{vueNYC}
 \\
-%TODO: v3
+Die aktuellste Version ist Vue 3 und erschien im Herbst 2020.
+Der Kern von Vue.js wurde dabei in TypeScript neu implementiert, was die Performance und den TypeScript-Support des Frameworks verbesserte.
+Neues Feature ist unter anderem die Composition API, dazu mehr im Abschnitt \ref{}. \cite{konstantinidis2020} %TODO set ref
+Weitere neue Features sind Suspense, Teleport und die Möglichkeit mehrere Root-Elemente pro Template zuhaben.
+Trotz der Inkompatibilität von Vue 2 und Vue 3 werden ein Großteil der Vue APIs zwischen diesen Geteilt,
+was einen umstieg erleichtert. \cite{vueFAQ}
