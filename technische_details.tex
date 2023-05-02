@@ -3,8 +3,30 @@
 
 \chapter{Technische Details}
 In diesem Kapitel soll es um die technischen Details von Vue.js gehen.
-Es wird ein Überblick gezeigt von verschiedenen in Vue.js vorhandenen Elemente
+Es wird ein Überblick gezeigt von verschiedenen in Vue.js vorhandenen Elementen
 und es wird auf diese anhand von Beispielen genauer eingegangen.
 
-\section{Options API and Composition API}\label{sec:options-api-and-composition-api}
-%https://vuejs.org/guide/introduction.html#api-styles
+\section{Options API vs. Composition API}\label{sec:options-api-and-composition-api}
+Vue organisiert einzelne Komponenten als \emph{Single-File Components (SFC)},
+die im HTML-ähnlichen Dateiformat mit der Dateiendung \lstinline{.vue} vorliegen.
+In einem SFC werden Aussehen, Struktur und Logik einer Komponente gebündelt, bestehend aus HTML-, CSS- und JavaScript-Elementen.
+Für den Aufbau einer solchen SFC gibt es seit Vue 3 zwei verschiedene Möglichkeiten.
+Zum einen gibt es die \emph{Options API} und zum anderen die \emph{Composition API}.
+\subsection*{Options API}
+Die länger vorhandene Variante ist die Options API.
+Bei der Options API wird für die Komponente ein JavaScript Objekt angelegt.
+Das Objekt kann verschiedene Optionen enthalten, darunter \lstinline{data} für Daten, \lstinline{methods} für Methoden und auch Lifecycle hooks wie \lstinline{mounted}.
+
+\subsection*{Composition API}
+Die Composition API kam mit Vue 3 hinzu und wurde später für Vue 2 nachgereicht \cite{vueFAQ}.
+Bei der Verwendung der Composition API wird in einem \lstinline{import}-Statement
+die benötigten API-Features wie zum Beispiel Lifecycle hooks angegeben.
+Der Code bei verwendung der Composition API wird in der Regel zwischen einem \lstinline{<script setup>} Tag verwendet.
+Mit dem Tag wird angegeben, dass zur Compilezeite eine Transformation durch geführt werden soll,
+die Composition API mit weniger Redundanz im Code zu nuten.
+So können Variablen und Funktionen direkt im Template genutzt werden.
+
+\subsection*{Gegenüberstellung}
+%TODO https://vuejs.org/guide/introduction.html#api-styles
+
+% ----------------------------------------------------------------------------
