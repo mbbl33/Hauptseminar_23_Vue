@@ -1,21 +1,26 @@
 %! Author = biebl
 %! Date = 02.05.2023
 
+
 \chapter{Technische Details}
 In diesem Kapitel soll es um die technischen Details von Vue.js gehen.
 Es wird ein Überblick gezeigt von verschiedenen in Vue.js vorhandenen Elementen
 und es wird auf diese anhand von Beispielen genauer eingegangen.
+Ich beziehe mich dabei auf Vue 3.
+
 
 \section{Options API vs. Composition API}\label{sec:options-api-and-composition-api}
 Vue organisiert einzelne Komponenten als \emph{Single-File Components (SFC)},
 die im HTML-ähnlichen Dateiformat mit der Dateiendung \lstinline{.vue} vorliegen.
 In einem SFC werden Aussehen, Struktur und Logik einer Komponente gebündelt, bestehend aus HTML-, CSS- und JavaScript-Elementen.
 Für den Aufbau einer solchen SFC gibt es seit Vue 3 zwei verschiedene Möglichkeiten.
-Zum einen gibt es die \emph{Options API} und zum anderen die \emph{Composition API}.
+Zum einen gibt es die \emph{Options API} und zum anderen die \emph{Composition API}. \cite{vueIntroduction}
+
 \subsection*{Options API}
 Die länger vorhandene Variante ist die Options API.
 Bei der Options API wird für die Komponente ein JavaScript Objekt angelegt.
 Das Objekt kann verschiedene Optionen enthalten, darunter \lstinline{data} für Daten, \lstinline{methods} für Methoden und auch Lifecycle hooks wie \lstinline{mounted}.
+\cite{vueIntroduction}
 
 \subsection*{Composition API}
 Die Composition API kam mit Vue 3 hinzu und wurde später für Vue 2 nachgereicht \cite{vueFAQ}.
@@ -23,10 +28,153 @@ Bei der Verwendung der Composition API wird in einem \lstinline{import}-Statemen
 die benötigten API-Features wie zum Beispiel Lifecycle hooks angegeben.
 Der Code bei verwendung der Composition API wird in der Regel zwischen einem \lstinline{<script setup>} Tag verwendet.
 Mit dem Tag wird angegeben, dass zur Compilezeite eine Transformation durch geführt werden soll,
-die Composition API mit weniger Redundanz im Code zu nuten.
+die Composition API mit weniger Redundanz im Code zu nutzen.
 So können Variablen und Funktionen direkt im Template genutzt werden.
+\cite{vueIntroduction}
 
 \subsection*{Gegenüberstellung}
-%TODO https://vuejs.org/guide/introduction.html#api-styles
+
+\begin{minipage}[t]{.45\textwidth}
+    \begin{lstlisting}[caption={Options API},language=javascript, label={lst:OptionsAPI}]
+<script>
+export default {
+  // reactive state
+  data() {
+    return {
+     wasPressed : false
+    }
+  },
+
+  // functions that mutate state and trigger updates
+  methods: {
+    setStatus() {
+      this.wasPressed = true;
+    }
+  },
+
+  // lifecycle hooks
+  mounted() {
+    console.log(`mounted`)
+  },
+
+  update(){
+    console.log(`update`)
+  },
+
+  unmounted(){
+    console.log(`unmounted`)
+  }
+}
+</script>
+
+<template>
+  <button @click="setStatus">Button was Pressed: {{ wasPressed }}</button>
+</template>
+    \end{lstlisting}
+\end{minipage}%
+\hspace{1cm}
+\begin{minipage}[t]{.5\textwidth}
+    \begin{lstlisting}[caption={Composition API},language=javascript, label={lst:CompositionAPI}]
+<script setup>
+import { ref, onMounted, onUpdated, onUnmounted } from 'vue'
+
+// reactive state
+const wasPressed = ref(false)
+
+// functions that mutate state and trigger updates
+function setStatus() {
+  wasPressed.value = true;
+}
+
+// lifecycle hooks
+onMounted(() => {
+   console.log(`mounted`)
+})
+
+onUpdated(() => {
+   console.log(`updated`)
+})
+
+ onUnmounted(() => {
+   console.log(`unmounted`)
+})
+
+</script>
+
+<template>
+  <button @click="setStatus">Button was Pressed: {{ wasPressed }}</button>
+</template>
+    \end{lstlisting}
+\end{minipage}
+
+In Vue können beide APIs ohne Einschränkung genutzt werden.
+In \ref{lst:OptionsAPI} und \ref{lst:CompositionAPI} sehen wir zwei gleichwertige
+Beispiele unterverwendung der unterschiedlichen APIs.
+Es werden Veränderungen im Lifecyle auf der Konsole ausgegeben und es wird festgehalten, ob ein Button gedrückt wurde.
+Für Anfänger mit ersten Erfahrungen in Objektorientierung wird die Options API empfohlen.
+Ansonsten sollte die Options API nur bei weniger komplexen Kleinprojekten genutzt werden.
+Für größere Projekte wird die Composition API empfohlen. \cite{vueIntroduction}
+
+\subsection*{Persönliche Meinung zu Options API vs. Composition API}
+Ich persönliche würde die Composition API der Options API vorziehen.
+Meine Begründung dafür ist, dass ich die Composition API deutlich übersichtlicher
+und strukturierter finde.
+Auch für weniger komplexe Kleinprojekte finde ich die Options API ungeeignet,
+da ein Projekt schnell größer werden kann als ursprünglich geplant und somit die
+wartbarere Composition API sinnvoll ist.
+
+
+\section{Direktiven in Vue.js}
+Direktiven beschreiben ein gewünschtes Verhalten in der View.
+In Vue beginnen diese Direktiven mit \emph{v-}.
+Vue bietet einige vordefinierte Direktiven wie v-for, v-if, v-else, v-show, v-on, v-slot, v-bind
+und v-model, bietet aber auch die Möglichkeit eigene Direktiven zu erstellen. \cite[S. 10]{steyer2019}
+\\
+Ich möchte mich hier auf ein paar der vordefinierten Direktiven beschränken eine Liste aller
+Direktiven und wie man eigene Direktiven erstellt sind in der Dokumentation von Vue zu finden. %TODO links to doku
+
+
+\subsection*{v-for}
+\emph{v-for} funktioniert wie eine klassische foreach-Schleife.
+Die \emph{v-for}-Direktive ermöglicht es über eine Sammlung von Werten zu iterieren und die Daten in der View zu nutzen.
+Erlaubte Datentypen sind Array, Object, number, string und solche die das Interface Iterable implementieren. \cite{vueDirectives}
+\begin{lstlisting}[caption={\emph{v-for}-Direktive},language=html, label={lst:v-for}]
+<div v-for="element in list">
+  {{ element.value }}
+</div>
+\end{lstlisting}
+
+\newpage
+
+\subsection*{v-if}
+Die Direktive \emph{v-if} funktioniert ähnlich der eines klassischen if-Statements in der Programmierung.
+\emph{v-if} prüft anhand des übergebenen Wahrheitswerts, ob ein HTML-Element angezeigt werden soll.
+Mit der Verwendung von \emph{v-if} können Alternativen mit \emph{v-else} für den Fall, dass die Bedingung nicht erfüllt ist,
+oder mit \emph{v-else-if} für eine bedingte Alternative ergänzt werden.
+Entsprechend werden dann die Alternativen angezeigt. \cite{vueDirectives}
+\begin{lstlisting}[caption={\emph{v-if}-Direktive},language=html, label={lst:v-if}]
+<div v-if="condition">
+  condition is true
+</div>
+<div v-else-if="anotherCondition">
+  anotherCondition is true
+</div>
+<div v-else>
+  condition and anotherCondition are false
+</div>
+\end{lstlisting}
+
+\subsection*{v-on}
+Mit der \emph{v-on}-Direktive wird ein Event-Listener an das HTML-Element gebunden.
+Als Argument bekommt die Direktive das Event, auf welches der Listener warten soll und
+die anschließend auszuführende Aktion.
+Als Kurzform von \emph{v-on} ist auch  \emph{@} möglich.
+Mit \emph{\$event} ist es möglich Eventeigenschaften weiter zugeben.
+Darüber hinaus gibt es noch Modifier die das zu erwartende Event präzisieren. \cite{vueDirectives}
+\begin{lstlisting}[caption={\emph{v-on}-Direktive},language=html, label={lst:v-on}]
+<button v-on:click="buttonClicked"></button>
+<button @click="buttonClickedButShortHand"></button>
+<button v-on:click.richt="buttonRightClicked"></button>
+\end{lstlisting}
 
 % ----------------------------------------------------------------------------
