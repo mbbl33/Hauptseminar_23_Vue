@@ -2,7 +2,7 @@
 %! Date = 02.05.2023
 
 
-\chapter{Technische Details}
+\chapter{Technische Details}\label{ch:technische-details}
 In diesem Kapitel soll es um die technischen Details von Vue.js gehen.
 Es wird ein Überblick gezeigt von verschiedenen in Vue.js vorhandenen Elementen
 und es wird auf diese anhand von Beispielen genauer eingegangen.
@@ -124,14 +124,16 @@ da ein Projekt schnell größer werden kann als ursprünglich geplant und somit 
 wartbarere Composition API sinnvoll ist.
 
 
-\section{Direktiven in Vue.js}
+\section{Direktiven in Vue.js}\label{sec:direktiven-in-vue.js}
 Direktiven beschreiben ein gewünschtes Verhalten in der View.
 In Vue beginnen diese Direktiven mit \emph{v-}.
 Vue bietet einige vordefinierte Direktiven wie v-for, v-if, v-else, v-show, v-on, v-slot, v-bind
 und v-model, bietet aber auch die Möglichkeit eigene Direktiven zu erstellen. \cite[S. 10]{steyer2019}
 \\
-Ich möchte mich hier auf ein paar der vordefinierten Direktiven beschränken eine Liste aller
-Direktiven und wie man eigene Direktiven erstellt sind in der Dokumentation von Vue zu finden. %TODO links to doku
+Ich möchte mich hier auf ein paar der vordefinierten Direktiven beschränken.
+Eine Liste aller Direktiven\footnote{https://vuejs.org/api/built-in-directives.html}
+und wie man eigene Direktiven\footnote{https://vuejs.org/guide/reusability/custom-directives.html}
+erstellt sind in der Dokumentation von Vue zu finden.
 
 
 \subsection*{v-for}
@@ -175,6 +177,90 @@ Darüber hinaus gibt es noch Modifier die das zu erwartende Event präzisieren. 
 <button v-on:click="buttonClicked"></button>
 <button @click="buttonClickedButShortHand"></button>
 <button v-on:click.richt="buttonRightClicked"></button>
+\end{lstlisting}
+
+\newpage
+
+\section{Komponenten in Vue.js}\label{sec:komponenten-in-vue.js}
+Komponenten sind wiederverwendbare Bausteine.
+Die Komponenten können beliebig oft in der View verwendet werden und im Model unabhängig angesteuert werden.
+Vue bietet die Möglichkeit Komponenten selbst zu definieren aus HTML, CSS, sowie JavaScript und sie später mit einem
+eigen definierten HTML-Tag anzusteuern.\cite[S. 11-12]{steyer2019}
+\\
+Wie in Abschnitt \ref{sec:options-api-and-composition-api} bereits erwähnt, werden in Vue Komponenten normalerweise als SFC geschrieben.
+Eine Komponente kann wie in Abschnitt \ref{sec:options-api-and-composition-api} erwähnt und wie in Listings \ref{lst:CompositionAPI} oder \ref{lst:OptionsAPI}
+erstellt werden.
+Alternative kann man die Komponente als JavaScript-Objekt erstellen, um den Build-Schritt zu umgehen (siehe Listing \ref{lst:Komponente als JavaScript-Objekt}).
+Diese Komponente kann dann mit einem Alias im Script-Teile einer anderen Komponente importiert werden und muss noch als Komponente
+registriert werden.
+Nach dem Registrieren kann der Alias als Tag für die importiere Komponente verwendet werden. \cite{vueComponents}
+
+
+\begin{lstlisting}[caption={Komponente als JavaScript-Objekt},language=javascript,label={lst:Komponente als JavaScript-Objekt}]
+<script>
+export default {
+  data() {
+    return {
+     wasPressed : false
+    }
+  },
+  template:`<button @click="setStatus">Button was Pressed: {{ wasPressed }}</button>`
+}
+\end{lstlisting}
+
+
+\begin{lstlisting}[caption={Verwendung einer Komponente},language=javascript,label={lst:Verwendung einer Komponente}]
+<script>
+
+import ButtonStatusChecker from './ButtonStatusChecker.vue' //import of component
+
+export default {
+  components: {
+    ButtonStatusChecker //component registration
+  }
+}
+</script>
+
+<template>
+  <ButtonStatusChecker /> //using component
+</template>
+\end{lstlisting}
+
+Neben der lokalen Registrierung gibt es auch die Möglichkeit eine Komponente global
+zu registrieren, um sie nicht für bei jeder Verwendung in einer anderen Komponente
+extra importieren und registrieren zu müssen.
+Die globale Registrierung ist mit Aufruf der \emph{component()}-Methode möglich.
+Der \emph{component()}-Methode wird dann der Alias und die importierte \emph{.vue}-Datei übergeben.
+Alternativ kann auch die Implementierung beim Aufruf direkt übergeben werden. \cite{vueComponentsRegistration}
+
+\newpage
+
+\begin{lstlisting}[caption={Globale Registrierung einer Komponente},language=javascript,label={lst:Globale Registrierung}]
+import { createApp } from 'vue'
+import ButtonStatusChecker from './ButtonStatusChecker.vue'
+const app = createApp({})
+app.component('ButtonStatusChecker', ButtonStatusChecker)
+\end{lstlisting}
+
+
+Um Daten an eine Komponente weiter zugeben gibt es die \emph{probs}-Option beim Erstellen einer Komponente.
+Das \emph{probs}-Attribut erhält einen Namen, über die es dann später in
+HTML angesteuert werden kann. \cite{vueComponents}
+
+\begin{lstlisting}[caption={Erstellung eines \emph{probs}},language=javascript,label={lst:Erstellung eines probs}]
+<script>
+export default {
+  props: ['text']
+}
+</script>
+
+<template>
+  <p>{{ text }}<p>
+</template>
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Nutzung eines \emph{probs}},language=javascript,label={lst:Nutzung eines probs}]
+<Paragraph text="Hallo Welt" />
 \end{lstlisting}
 
 % ----------------------------------------------------------------------------
