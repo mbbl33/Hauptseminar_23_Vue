@@ -12,5 +12,6 @@
 \contentsline {lstlisting}{\numberline {3.8}Globale Registrierung einer Komponente}{12}{lstlisting.3.8}%
 \contentsline {lstlisting}{\numberline {3.9}Erstellung eines \emph {probs}}{12}{lstlisting.3.9}%
 \contentsline {lstlisting}{\numberline {3.10}Nutzung eines \emph {probs}}{12}{lstlisting.3.10}%
+\contentsline {lstlisting}{\numberline {3.11}Mustache-Syntax}{13}{lstlisting.3.11}%
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

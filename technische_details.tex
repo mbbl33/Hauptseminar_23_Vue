@@ -191,9 +191,9 @@ Wie in Abschnitt \ref{sec:options-api-and-composition-api} bereits erwähnt, wer
 Eine Komponente kann wie in Abschnitt \ref{sec:options-api-and-composition-api} erwähnt und wie in Listings \ref{lst:CompositionAPI} oder \ref{lst:OptionsAPI}
 erstellt werden.
 Alternative kann man die Komponente als JavaScript-Objekt erstellen, um den Build-Schritt zu umgehen (siehe Listing \ref{lst:Komponente als JavaScript-Objekt}).
-Diese Komponente kann dann mit einem Alias im Script-Teile einer anderen Komponente importiert werden und muss noch als Komponente
+Diese Komponente kann dann mit einem Alias im Script-Teile einer anderen Komponente importiert werden und muss dort noch als Komponente
 registriert werden.
-Nach dem Registrieren kann der Alias als Tag für die importiere Komponente verwendet werden. \cite{vueComponents}
+Nach dem Registrieren kann der Alias als Tag für die importierte Komponente verwendet werden. \cite{vueComponents}
 
 
 \begin{lstlisting}[caption={Komponente als JavaScript-Objekt},language=javascript,label={lst:Komponente als JavaScript-Objekt}]
@@ -227,9 +227,9 @@ export default {
 \end{lstlisting}
 
 Neben der lokalen Registrierung gibt es auch die Möglichkeit eine Komponente global
-zu registrieren, um sie nicht für bei jeder Verwendung in einer anderen Komponente
+zu registrieren, um sie nicht bei jeder Verwendung in einer anderen Komponente
 extra importieren und registrieren zu müssen.
-Die globale Registrierung ist mit Aufruf der \emph{component()}-Methode möglich.
+Die globale Registrierung ist mit Aufruf der \emph{component()}-Methode der App-Instanz möglich.
 Der \emph{component()}-Methode wird dann der Alias und die importierte \emph{.vue}-Datei übergeben.
 Alternativ kann auch die Implementierung beim Aufruf direkt übergeben werden. \cite{vueComponentsRegistration}
 
@@ -262,5 +262,38 @@ export default {
 \begin{lstlisting}[caption={Nutzung eines \emph{probs}},language=javascript,label={lst:Nutzung eines probs}]
 <Paragraph text="Hallo Welt" />
 \end{lstlisting}
+
+Abgesehen von den bereits aufgezählten Features, bietet Vue für Komponenten weitere Features wie die Möglichkeit auf Events zu reagieren,
+Inhalte mittels \emph{<slot>} einer Komponente zu übergeben und die Verwendung dynamischen Komponenten.
+Eine Anleitung zur verwendung dieser ist in der Vue Dokumentation nachzulesen\footnote{https://vuejs.org/guide/essentials/component-basics.html}.
+\cite{vueComponents}
+
+\newpage
+
+\section{Datenbindung in Vue.js}\label{sec:datenbindung-in-vue.js}
+Das Binding ist einer der Hauptaufgaben eines Frontend Frameworks.
+Beim Binding geht es darum Daten von View und Model aneinander zubinden. \cite[S. 11]{steyer2019}
+\\
+Die einfachste Form der Datenbindung in Vue ist die auch aus anderen Frameworks bekannte Mustache-Syntax möglich.
+Bei der Mustache-Syntax wird ein Variablenname aus dem Modell der Komponente zwischen zwei geschweiften Klammern gesetzt.
+Angezeigt wird dann die aktuelle String-Repräsentation des Wertes.
+Die Mustache-Syntax ist unidirektionale vom Modell zur View.
+\begin{lstlisting}[caption={Mustache-Syntax},language=javascript, label={lst:Mustache-Syntax}]
+<script>
+export default {
+  data() {
+    return {
+     text : 'Hallo Welt'
+    }
+  }
+</script>
+
+<template>
+  <p>{{ text }}</p>
+</template>
+\end{lstlisting}
+%TODO https://vuejs.org/guide/essentials/template-syntax.html
+%TODO Reactive, v-modell und v-bind
+
 
 % ----------------------------------------------------------------------------
