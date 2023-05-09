@@ -134,6 +134,7 @@ Ich möchte mich hier auf ein paar der vordefinierten Direktiven beschränken.
 Eine Liste aller Direktiven\footnote{https://vuejs.org/api/built-in-directives.html}
 und wie man eigene Direktiven\footnote{https://vuejs.org/guide/reusability/custom-directives.html}
 erstellt sind in der Dokumentation von Vue zu finden.
+Auf Direktiven zur Datenbindung gehe ich an passenderer Stelle in Abschnitt \ref{sec:datenbindung-in-vue.js} ein.
 
 
 \subsection*{v-for}
@@ -185,7 +186,7 @@ Darüber hinaus gibt es noch Modifier die das zu erwartende Event präzisieren. 
 Komponenten sind wiederverwendbare Bausteine.
 Die Komponenten können beliebig oft in der View verwendet werden und im Model unabhängig angesteuert werden.
 Vue bietet die Möglichkeit Komponenten selbst zu definieren aus HTML, CSS, sowie JavaScript und sie später mit einem
-eigen definierten HTML-Tag anzusteuern.\cite[S. 11-12]{steyer2019}
+eigen definierten HTML-Tag anzusteuern. \cite[S. 11-12]{steyer2019}
 \\
 Wie in Abschnitt \ref{sec:options-api-and-composition-api} bereits erwähnt, werden in Vue Komponenten normalerweise als SFC geschrieben.
 Eine Komponente kann wie in Abschnitt \ref{sec:options-api-and-composition-api} erwähnt und wie in Listings \ref{lst:CompositionAPI} oder \ref{lst:OptionsAPI}
@@ -265,7 +266,7 @@ export default {
 
 Abgesehen von den bereits aufgezählten Features, bietet Vue für Komponenten weitere Features wie die Möglichkeit auf Events zu reagieren,
 Inhalte mittels \emph{<slot>} einer Komponente zu übergeben und die Verwendung dynamischen Komponenten.
-Eine Anleitung zur verwendung dieser ist in der Vue Dokumentation nachzulesen\footnote{https://vuejs.org/guide/essentials/component-basics.html}.
+Eine Anleitung zur verwendung dieser Features ist in der Vue Dokumentation nachzulesen\footnote{https://vuejs.org/guide/essentials/component-basics.html}.
 \cite{vueComponents}
 
 \newpage
@@ -273,11 +274,11 @@ Eine Anleitung zur verwendung dieser ist in der Vue Dokumentation nachzulesen\fo
 \section{Datenbindung in Vue.js}\label{sec:datenbindung-in-vue.js}
 Das Binding ist einer der Hauptaufgaben eines Frontend Frameworks.
 Beim Binding geht es darum Daten von View und Model aneinander zubinden. \cite[S. 11]{steyer2019}
-\\
-Die einfachste Form der Datenbindung in Vue ist die auch aus anderen Frameworks bekannte Mustache-Syntax möglich.
+\subsection*{Mustache-Syntax}
+Die einfachste Form der Datenbindung in Vue ist mit der auch aus anderen Frameworks bekannte Mustache-Syntax möglich.
 Bei der Mustache-Syntax wird ein Variablenname aus dem Modell der Komponente zwischen zwei geschweiften Klammern gesetzt.
 Angezeigt wird dann die aktuelle String-Repräsentation des Wertes.
-Die Mustache-Syntax ist unidirektionale vom Modell zur View.
+Die Mustache-Syntax ist unidirektionale vom Modell zur View. \cite{vueTemplateSyntax}
 \begin{lstlisting}[caption={Mustache-Syntax},language=javascript, label={lst:Mustache-Syntax}]
 <script>
 export default {
@@ -292,8 +293,105 @@ export default {
   <p>{{ text }}</p>
 </template>
 \end{lstlisting}
-%TODO https://vuejs.org/guide/essentials/template-syntax.html
-%TODO Reactive, v-modell und v-bind
 
+\subsection*{v-text}
+Neben den in Abschnitt \ref{sec:direktiven-in-vue.js}
+erwähnten Direktiven gibt es noch weitere Direktiven zur Datenbindung.
+Die \emph{v-text}-Direktive ist eine Alternative zur Mustache-Syntax,
+diese überschreibt jedoch den gesamten existierenden Inhalt des HTML-Elements bei ein änderung im Modell.
+Ein Ändern in Teilen wie bei der Mustache-Syntax ist nicht möglich. \cite{vueDirectives}
+\begin{lstlisting}[caption={\emph{v-text}-Direktive},language=javascript, label={lst:v-text-Direktive}]
+<script>
+export default {
+  data() {
+    return {
+     text : 'Hallo Welt'
+    }
+  }
+</script>
 
+<template>
+  <p v-text="text"></p>
+</template>
+\end{lstlisting}
+
+\subsection*{v-html}
+Die \emph{v-html}-Direktive ist dafür da, wenn man Daten aus dem Model in der View als HTML interpretiert haben möchte.
+Aus Sicherheitsgründen empfiehlt es sich nur HTML-Code aus vertrauenswürdigen Quellen zu nutzen. \cite{vueTemplateSyntax}
+\begin{lstlisting}[caption={\emph{v-html}-Direktive},language=javascript, label={lst:v-html-Direktive}]
+<script>
+export default {
+  data() {
+    return {
+     heading : '<h1>Hallo Welt</h1>'
+    }
+  }
+</script>
+
+<template>
+  <p v-html="heading"></p>
+</template>
+\end{lstlisting}
+
+\subsection*{v-bind}
+Möchte man Daten an HTML-Attribute binden, ist dies mit der \emph{v-bind}-Direktive möglich.
+Da \emph{v-bind} eine häufig genutzte Direktive ist, gibt es eine Kurzform,
+die einfach nur aus einem vorangestellten Doppelpunkt besteht. \cite{vueTemplateSyntax}
+\begin{lstlisting}[caption={\emph{v-bind}-Direktive},language=javascript, label={lst:v-bind-Direktive}]
+<script>
+export default {
+  data() {
+    return {
+     id : 'greeting',
+     idShortHand : 'target',
+     isButtonOn: false
+    }
+  }
+</script>
+
+<template>
+  <p v-bind:id="id">Hallo</p>
+  <p :id="idShortHand">Welt</p>
+  <button :disabled="isButtonOn">Drück mich</button>
+</template>
+\end{lstlisting}
+
+\newpage
+
+\subsection*{v-modell}
+Die bisher vorgestellten Binding Varianten sind Unidirektional,
+für bidirektionales Binding gibt es die \emph{v-model}-Direktive.
+Die \emph{v-model}-Direktive ist eine Verbindung aus \emph{v-on}-Direktive
+und \emph{v-bind}-Direktive.
+Mit der \emph{v-bind}-Direktive ist es zum Beispiel möglich vorausgefüllte Inputfelder zu erstellen.
+Bei Eingabe in das Inputfeld wird entsprechend das Datenfeld im Modell updatet
+und bei änderungen im Modell wird der Text im Inputfeld geupdatet. \cite{vueComponentV-model}
+\begin{lstlisting}[caption={\emph{v-modell}-Direktive},language=javascript, label={lst:v-modell-Direktive}]
+<script>
+export default {
+  data() {
+    return {
+     username : 'Mustermann',
+    }
+  }
+</script>
+
+<template>
+  <input v-model="username" />
+</template>
+\end{lstlisting}
+
+\section{Routing in Vue.js}
+Für das Routing muss man zwischen Multi-Page und Single-Page Anwendungen unterscheiden.
+Bei einer Multi-Page Anwendung (MPA) erfolgt das Aufrufen einer neuen Unterseite über die Kommunikation
+mit dem Serve, die Seite wird dann serverseitig gerendert.
+Bei MPA handelt es sich um einen älteren \emph{klassischen} Ansatz.\cite[S. 262]{kaluvza2018comparison}
+\\
+In Vue wird aber der Ansatz der Single-Page Anwendung (SPA) verfolgt.
+Bei Single-Page Anwendungen existieren Unterseiten nur simuliert und
+die Inhalte einer einzelnen Seite werden eigentlich einfach nur mithilfe von JavaScript ausgetauscht. \cite[S. 174-175]{peterke2019}
+\\
+Der offizielle Router von Vue ist nicht Teil des Vue-Kerns und
+muss daher bei Bedarf gesondert installiert werden. %TODO cite
+%TODO install, registrierung, param, querry, nested, router link and rout link
 % ----------------------------------------------------------------------------
