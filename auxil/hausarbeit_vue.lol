@@ -16,6 +16,10 @@
 \contentsline {lstlisting}{\numberline {3.12}\emph {v-text}-Direktive}{13}{lstlisting.3.12}%
 \contentsline {lstlisting}{\numberline {3.13}\emph {v-html}-Direktive}{14}{lstlisting.3.13}%
 \contentsline {lstlisting}{\numberline {3.14}\emph {v-bind}-Direktive}{14}{lstlisting.3.14}%
-\contentsline {lstlisting}{\numberline {3.15}\emph {v-modell}-Direktive}{15}{lstlisting.3.15}%
+\contentsline {lstlisting}{\numberline {3.15}\emph {v-model}-Direktive}{15}{lstlisting.3.15}%
+\contentsline {lstlisting}{\numberline {3.16}Router initialisieren}{16}{lstlisting.3.16}%
+\contentsline {lstlisting}{\numberline {3.17}Verwendung des Routers}{16}{lstlisting.3.17}%
+\contentsline {lstlisting}{\numberline {3.18}Route mit Parameter}{17}{lstlisting.3.18}%
+\contentsline {lstlisting}{\numberline {3.19}Zugriff auf Routingparameter}{17}{lstlisting.3.19}%
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
