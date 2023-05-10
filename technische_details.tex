@@ -19,14 +19,14 @@ Zum einen gibt es die \emph{Options API} und zum anderen die \emph{Composition A
 \subsection*{Options API}
 Die länger vorhandene Variante ist die Options API.
 Bei der Options API wird für die Komponente ein JavaScript Objekt angelegt.
-Das Objekt kann verschiedene Optionen enthalten, darunter \lstinline{data} für Daten, \lstinline{methods} für Methoden und auch Lifecycle hooks wie \lstinline{mounted}.
+Das Objekt kann verschiedene Optionen enthalten, darunter \lstinline{data} für Daten, \lstinline{methods} für Methoden und auch Lifecycle-hooks wie \lstinline{mounted}.
 \cite{vueIntroduction}
 
 \subsection*{Composition API}
 Die Composition API kam mit Vue 3 hinzu und wurde später für Vue 2 nachgereicht \cite{vueFAQ}.
 Bei der Verwendung der Composition API wird in einem \lstinline{import}-Statement
-die benötigten API-Features wie zum Beispiel Lifecycle hooks angegeben.
-Der Code bei verwendung der Composition API wird in der Regel zwischen einem \lstinline{<script setup>} Tag verwendet.
+die benötigten API-Features wie zum Beispiel Lifecycle-hooks angegeben.
+Der Code bei Verwendung der Composition API wird in der Regel zwischen einem \lstinline{<script setup>} Tag verwendet.
 Mit dem Tag wird angegeben, dass zur Compilezeite eine Transformation durch geführt werden soll,
 die Composition API mit weniger Redundanz im Code zu nutzen.
 So können Variablen und Funktionen direkt im Template genutzt werden.
@@ -109,8 +109,8 @@ onUpdated(() => {
 
 In Vue können beide APIs ohne Einschränkung genutzt werden.
 In \ref{lst:OptionsAPI} und \ref{lst:CompositionAPI} sehen wir zwei gleichwertige
-Beispiele unterverwendung der unterschiedlichen APIs.
-Es werden Veränderungen im Lifecyle auf der Konsole ausgegeben und es wird festgehalten, ob ein Button gedrückt wurde.
+Beispiele, umgesetzt mit jeweils einer der APIs.
+Es werden Veränderungen im Lifecycle auf der Konsole ausgegeben und es wird festgehalten, ob ein Button gedrückt wurde.
 Für Anfänger mit ersten Erfahrungen in Objektorientierung wird die Options API empfohlen.
 Ansonsten sollte die Options API nur bei weniger komplexen Kleinprojekten genutzt werden.
 Für größere Projekte wird die Composition API empfohlen. \cite{vueIntroduction}
@@ -128,7 +128,7 @@ wartbarere Composition API sinnvoll ist.
 Direktiven beschreiben ein gewünschtes Verhalten in der View.
 In Vue beginnen diese Direktiven mit \emph{v-}.
 Vue bietet einige vordefinierte Direktiven wie v-for, v-if, v-else, v-show, v-on, v-slot, v-bind
-und v-model, bietet aber auch die Möglichkeit eigene Direktiven zu erstellen. \cite[S. 10]{steyer2019}
+und v-model, bietet aber auch die Möglichkeit, eigene Direktiven zu erstellen. \cite[S. 10]{steyer2019}
 \\
 Ich möchte mich hier auf ein paar der vordefinierten Direktiven beschränken.
 Eine Liste aller Direktiven\footnote{https://vuejs.org/api/built-in-directives.html}
@@ -140,7 +140,7 @@ Auf Direktiven zur Datenbindung gehe ich an passenderer Stelle in Abschnitt \ref
 \subsection*{v-for}
 \emph{v-for} funktioniert wie eine klassische foreach-Schleife.
 Die \emph{v-for}-Direktive ermöglicht es über eine Sammlung von Werten zu iterieren und die Daten in der View zu nutzen.
-Erlaubte Datentypen sind Array, Object, number, string und solche die das Interface Iterable implementieren. \cite{vueDirectives}
+Erlaubte Datentypen sind Array, Object, number, string und solche, die das Interface Iterable implementieren. \cite{vueDirectives}
 \begin{lstlisting}[caption={\emph{v-for}-Direktive},language=html, label={lst:v-for}]
 <div v-for="element in list">
   {{ element.value }}
@@ -173,7 +173,7 @@ Als Argument bekommt die Direktive das Event, auf welches der Listener warten so
 die anschließend auszuführende Aktion.
 Als Kurzform von \emph{v-on} ist auch  \emph{@} möglich.
 Mit \emph{\$event} ist es möglich Eventeigenschaften weiter zugeben.
-Darüber hinaus gibt es noch Modifier die das zu erwartende Event präzisieren. \cite{vueDirectives}
+Darüber hinaus gibt es noch Modifier, die das zu erwartende Event präzisieren. \cite{vueDirectives}
 \begin{lstlisting}[caption={\emph{v-on}-Direktive},language=html, label={lst:v-on}]
 <button v-on:click="buttonClicked"></button>
 <button @click="buttonClickedButShortHand"></button>
@@ -244,7 +244,7 @@ app.component('ButtonStatusChecker', ButtonStatusChecker)
 \end{lstlisting}
 
 
-Um Daten an eine Komponente weiter zugeben gibt es die \emph{probs}-Option beim Erstellen einer Komponente.
+Um Daten an eine Komponente weiter zugeben, gibt es die \emph{probs}-Option beim Erstellen einer Komponente.
 Das \emph{probs}-Attribut erhält einen Namen, über die es dann später in
 HTML angesteuert werden kann. \cite{vueComponents}
 
@@ -266,14 +266,14 @@ export default {
 
 Abgesehen von den bereits aufgezählten Features, bietet Vue für Komponenten weitere Features wie die Möglichkeit auf Events zu reagieren,
 Inhalte mittels \emph{<slot>} einer Komponente zu übergeben und die Verwendung dynamischer Komponenten.
-Eine Anleitung zur verwendung dieser Features ist in der Vue Dokumentation nachzulesen\footnote{https://vuejs.org/guide/essentials/component-basics.html}.
+Eine Anleitung zur Verwendung dieser Features ist in der Vue Dokumentation nachzulesen\footnote{https://vuejs.org/guide/essentials/component-basics.html}.
 \cite{vueComponents}
 
 \newpage
 
 \section{Datenbindung in Vue.js}\label{sec:datenbindung-in-vue.js}
 Das Binding ist einer der Hauptaufgaben eines Frontend Frameworks.
-Beim Binding geht es darum Daten von View und Model aneinander zubinden. \cite[S. 11]{steyer2019}
+Beim Binding geht es darum, Daten von View und Model aneinander zubinden. \cite[S. 11]{steyer2019}
 \subsection*{Mustache-Syntax}
 Die einfachste Form der Datenbindung in Vue ist mit der auch aus anderen Frameworks bekannte Mustache-Syntax möglich.
 Bei der Mustache-Syntax wird ein Variablenname aus dem Modell der Komponente zwischen zwei geschweiften Klammern gesetzt.
@@ -298,7 +298,7 @@ export default {
 Neben den in Abschnitt \ref{sec:direktiven-in-vue.js}
 erwähnten Direktiven gibt es noch weitere Direktiven zur Datenbindung.
 Die \emph{v-text}-Direktive ist eine Alternative zur Mustache-Syntax,
-diese überschreibt jedoch den gesamten existierenden Inhalt des HTML-Elements bei ein änderung im Modell.
+diese überschreibt jedoch den gesamten existierenden Inhalt des HTML-Elements bei einer Änderung im Modell.
 Ein Ändern in Teilen wie bei der Mustache-Syntax ist nicht möglich. \cite{vueDirectives}
 \begin{lstlisting}[caption={\emph{v-text}-Direktive},language=javascript, label={lst:v-text-Direktive}]
 <script>
@@ -359,13 +359,13 @@ export default {
 \newpage
 
 \subsection*{v-model}
-Die bisher vorgestellten Binding Varianten sind Unidirektional,
+Die bisher vorgestellten Binding Varianten sind unidirektional,
 für bidirektionales Binding gibt es die \emph{v-model}-Direktive.
 Die \emph{v-model}-Direktive ist eine Verbindung aus \emph{v-on}-Direktive
 und \emph{v-bind}-Direktive.
-Mit der \emph{v-bind}-Direktive ist es zum Beispiel möglich vorausgefüllte Inputfelder zu erstellen.
+Mit der \emph{v-bind}-Direktive ist es zum Beispiel möglich, vorausgefüllte Inputfelder zu erstellen.
 Bei Eingabe in das Inputfeld wird entsprechend das Datenfeld im Modell updatet
-und bei änderungen im Model wird der Text im Inputfeld geupdatet. \cite{vueComponentV-model}
+und bei Änderungen im Model wird der Text im Inputfeld upgedatet. \cite{vueComponentV-model}
 \begin{lstlisting}[caption={\emph{v-model}-Direktive},language=javascript, label={lst:v-model-Direktive}]
 <script>
 export default {
@@ -384,7 +384,7 @@ export default {
 \section{Routing in Vue.js}
 Für das Routing muss man zwischen Multi-Page und Single-Page Anwendungen unterscheiden.
 Bei einer Multi-Page Anwendung (MPA) erfolgt das Aufrufen einer neuen Unterseite über die Kommunikation
-mit dem Serve, die Seite wird dann serverseitig gerendert.
+mit dem Server, die Seite wird dann serverseitig gerendert.
 Bei MPA handelt es sich um einen älteren \emph{klassischen} Ansatz.\cite[S. 262]{kaluvza2018comparison}
 \\
 In Vue wird der Ansatz der Single-Page Anwendung (SPA) verfolgt.
@@ -399,9 +399,9 @@ kann über npm mit dem Befehl \lstinline{npm install vue-router@4} installiert w
 \newpage
 
 \subsection*{Router initialisieren}
-Möchte man den Router nutzen muss man diesen zunächst erstellen.
+Möchte man den Router nutzen, muss man diesen zunächst erstellen.
 Dem Router werden die Routen, bestehend aus Pfad und aufzurufender Komponente übergeben.
-Zusätzlich wird beim Erstellen des Routers festgehalten wie die Routinghistorie festgehalten werden soll.
+Zusätzlich wird beim Erstellen des Routers festgehalten, wie die Routinghistorie festgehalten werden soll.
 Abschließend muss der Vue-App-Instanz mitgeteilt werden, dass sie den Router nutzen soll. \cite{vueRouterGettingStarted}
 \begin{lstlisting}[caption={Router initialisieren},language=javascript, label={lst:Router-initialisieren}]
 //import of components
@@ -428,11 +428,10 @@ app.mount('#app')
 
 \subsection*{Verwendung des Routers}
 Um den Router zu verwenden und auf eine neue unterseite zu verlinken,
-gibt es den HTML-Tag \emph{router-link} mit dem Attribut \emph{to} kann dann der gewünschte Pfad angegeben werden.
+gibt es den HTML-Tag \emph{router-link}, mit dem Attribut \emph{to} kann dann der gewünschte Pfad angegeben werden.
 Wie bereits erwähnt verwendet man Vue in der Regel für SPA, in denen ein Seitenwechsel nur simuliert stattfindet.
 Mit dem HTML-Tag \emph{router-view} gibt man den Bereich der Seite an, in dem beim Aufrufen eines Links die neue Komponente gerendert werden soll.
-Um diesen \emph{router-view}-Tag herum können dann Elemente die immer zu sehen sein sollen angelegt werden,
-wie z.B. eine Navigationsleiste. \cite{vueRouterGettingStarted}
+Um diesen \emph{router-view}-Tag herum können dann Elemente, die immer zu sehen sein sollen, angelegt werden. \cite{vueRouterGettingStarted}
 
 \begin{lstlisting}[caption={Verwendung des Routers},language=javascript,label={lst:Verwendung-des-Routers}]
 <div class="navbar">
@@ -458,7 +457,7 @@ $route.params.id
 \end{lstlisting}
 
 \subsection*{Weitere Routing-Features}
-Weitere Features die in Vue mithilfe des Routers genutzt werden können,
+Weitere Features, die in Vue mithilfe des Routers genutzt werden können,
 sind unter anderem die Verwendung von Nested Routes\footnote{https://router.vuejs.org/guide/essentials/nested-routes.html}
 und das Ändern des History-Modes\footnote{https://router.vuejs.org/guide/essentials/history-mode.html} beim Erstellen des Routers.
 Diese Features sind ausführlich in der Dokumentation des Vue-Routers beschrieben.
