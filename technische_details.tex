@@ -7,6 +7,8 @@ In diesem Kapitel soll es um die technischen Details von Vue.js gehen.
 Es wird ein Überblick gezeigt von verschiedenen in Vue.js vorhandenen Elementen
 und es wird auf diese anhand von Beispielen genauer eingegangen.
 Ich beziehe mich dabei auf Vue 3.
+Aufgrund der Kürze der Arbeit und des Funktionsumfangs von Vue.js ist es nicht mögliche alle Features abzudecken.
+Das Kapitel dient mehr dazu dem Leser einen ersten Eindruck von Vue.js zu geben.
 
 
 \section{Options API vs. Composition API}\label{sec:options-api-and-composition-api}
@@ -48,7 +50,7 @@ export default {
   // functions that mutate state and trigger updates
   methods: {
     setStatus() {
-      this.wasPressed = true;
+      this.wasPressed = true
     }
   },
 
@@ -147,7 +149,7 @@ Erlaubte Datentypen sind Array, Object, number, string und solche, die das Inter
 </div>
 \end{lstlisting}
 
-\newpage
+%\newpage
 
 \subsection*{v-if}
 Die Direktive \emph{v-if} funktioniert ähnlich der eines klassischen if-Statements in der Programmierung.
@@ -180,7 +182,7 @@ Darüber hinaus gibt es noch Modifier, die das zu erwartende Event präzisieren.
 <button v-on:click.richt="buttonRightClicked"></button>
 \end{lstlisting}
 
-\newpage
+%\newpage
 
 \section{Komponenten in Vue.js}\label{sec:komponenten-in-vue.js}
 Komponenten sind wiederverwendbare Bausteine.
@@ -198,7 +200,6 @@ Nach dem Registrieren kann der Alias als Tag für die importierte Komponente ver
 
 
 \begin{lstlisting}[caption={Komponente als JavaScript-Objekt},language=javascript,label={lst:Komponente als JavaScript-Objekt}]
-<script>
 export default {
   data() {
     return {
@@ -234,7 +235,7 @@ Die globale Registrierung ist mit Aufruf der \emph{component()}-Methode der App-
 Der \emph{component()}-Methode wird dann der Alias und die importierte \emph{.vue}-Datei übergeben.
 Alternativ kann auch die Implementierung beim Aufruf direkt übergeben werden. \cite{vueComponentsRegistration}
 
-\newpage
+%\newpage
 
 \begin{lstlisting}[caption={Globale Registrierung einer Komponente},language=javascript,label={lst:Globale Registrierung}]
 import { createApp } from 'vue'
@@ -269,7 +270,7 @@ Inhalte mittels \emph{<slot>} einer Komponente zu übergeben und die Verwendung 
 Eine Anleitung zur Verwendung dieser Features ist in der Vue Dokumentation nachzulesen\footnote{https://vuejs.org/guide/essentials/component-basics.html}.
 \cite{vueComponents}
 
-\newpage
+%\newpage
 
 \section{Datenbindung in Vue.js}\label{sec:datenbindung-in-vue.js}
 Das Binding ist einer der Hauptaufgaben eines Frontend Frameworks.
@@ -356,7 +357,7 @@ export default {
 </template>
 \end{lstlisting}
 
-\newpage
+%\newpage
 
 \subsection*{v-model}
 Die bisher vorgestellten Binding Varianten sind unidirektional,
@@ -396,7 +397,7 @@ muss daher bei Bedarf gesondert installiert werden.
 Die aktuelle mit Vue 3 kompatible Router-Version ist Version 4 und
 kann über npm mit dem Befehl \lstinline{npm install vue-router@4} installiert werden.\cite{vueRouterInstallation}
 
-\newpage
+%\newpage
 
 \subsection*{Router initialisieren}
 Möchte man den Router nutzen, muss man diesen zunächst erstellen.
@@ -460,10 +461,68 @@ $route.params.id
 Weitere Features, die in Vue mithilfe des Routers genutzt werden können,
 sind unter anderem die Verwendung von Nested Routes\footnote{https://router.vuejs.org/guide/essentials/nested-routes.html}
 und das Ändern des History-Modes\footnote{https://router.vuejs.org/guide/essentials/history-mode.html} beim Erstellen des Routers.
-Diese Features sind ausführlich in der Dokumentation des Vue-Routers beschrieben.
+Diese Features und weitere Features sind ausführlich in der Dokumentation des Vue-Routers beschrieben.
 
-\section{State Management mit Vuex}
-%TODO anderer Name
+\section{State Management in Vue.js}
+In Vue besitzt jede Komponente ihren eigenen State, sowie eine View und Actions.
+\begin{lstlisting}[caption={State, View und Actions},language=javascript,label={lst:State-View-und-Actions}]
+<script>
+export default {
+  // state
+  data() {
+    return {
+     wasPressed : false
+    }
+  },
+
+  // actions
+  methods: {
+    setStatus() {
+      this.wasPressed = true
+    }
+  }
+}
+</script>
+
+//view
+<template>
+  <p> {{ wasPressed }}</p>
+</template>
+\end{lstlisting}
+
+Der Begriff \emph{State} bezieht sich auf den Zustand von Daten und somit auf ihren aktuellen Wert.
+Möchte man von aus verschiedenen Komponenten auf denselben State zugreifen,
+biete Vue mit der Reactivity API eine Möglichkeit für einfaches State Management.
+Mit der Reactivity API kann man einen Store anlegen, welcher den State enthält.
+Der Store kann, dann in den Komponenten wo er benötigt wird, importiert werden.
+Aus Gründen der Wartbarkeit des Codes empfiehlt es sich nicht den State lokal in einer Komponente anzupassen,
+sondern im Store eine zugehörige Action anzulegen. \cite{vueStateManagement}
+
+\begin{lstlisting}[caption={Anlegen eines Stores mit Reactivity API},language=javascript,label={lst:Anlegen-Store}]
+import { reactive } from 'vue'
+
+export const store = reactive({
+  wasPressed : false,
+  setStatus() {
+      this.wasPressed = true
+  }
+})
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Vewendung des Stores},language=javascript,label={lst:Verwendung-Store}]
+<template>
+  <button @click="store.setStatus()">
+    Button was Pressed: {{ store.wasPressed }}
+  </button>
+</template>
+\end{lstlisting}
+
+Für komplexeres State Management wird die offizielle State Management Library \emph{Pina} empfohlen.
+Pina bietet unter anderem die Vorteile serverseitiges Rendering zu unterstützen und
+ermöglicht ein besseres Debugging durch eine Integration in die Vue DevTools.
+Pina löste Vuex als offizielle State Management Library ab und bietet unter anderem gegenüber von Vuex
+die Möglichkeit mehrere Stores zu haben und eine einfachere Anwendung.  \cite{vueStateManagement}
+
 \section{Architektur}
-
+%TODO Strukutur?
 % ----------------------------------------------------------------------------
