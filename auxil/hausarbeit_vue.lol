@@ -25,4 +25,7 @@
 \contentsline {lstlisting}{\numberline {3.21}Anlegen eines Stores mit Reactivity API}{17}{lstlisting.3.21}%
 \contentsline {lstlisting}{\numberline {3.22}Vewendung des Stores}{17}{lstlisting.3.22}%
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

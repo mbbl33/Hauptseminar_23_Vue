@@ -524,5 +524,41 @@ Pina löste Vuex als offizielle State Management Library ab und bietet unter and
 die Möglichkeit mehrere Stores zu haben und eine einfachere Anwendung.  \cite{vueStateManagement}
 
 \section{Architektur}
-%TODO Strukutur?
+
+\subsection*{Projektstruktur}
+Bei Verwendung des Vue-CLI wird die Dateistruktur des Projekts bereits automatisch erstellt.
+Während des Initierungsvorgangs hat man die Möglichkeit Erweiterungen wie den Router und Pina hinzuzufügen.
+Fügt man die Erweiterungen hinzu, werden automatisch passende Order wie \emph{router} und \emph{stores} angelegt.
+Das Folder-by-Type-Prinzip ist die Standardstruktur für ein Vue-Projekt.
+Für den Komponenten-Ordner wird empfohlen keine unterverzeichnisse zu machen und
+die Komponenten auf einer Ebene zu belassen. \cite{largeScaleVue}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.4\textwidth]{img/vueFileStructure}
+  \caption{File Struktur von Vue}
+  \label{fig:vueFileStructure}
+\end{figure}
+
+\subsection*{Der virtuelle DOM}
+Das ändern des HTML-DOMs ist aufwändig kann zu Performanceproblemen führen.
+Für eine bessere Performance benutzt Vue.js einen virtuellen DOM.
+Der virtuelle DOM ist eine Kopie des eigentlichen DOM.
+Änderungen werden zunächst am virtuellen DOM vorgenommen.
+Die Änderungen am virtuellen DOM ermöglicht es mehrere Änderungen zu bündeln,
+bevor der reelle DOM angepasst wird. \cite[S. 10-11]{steyer2019} %TODO https://vuejs.org/guide/extras/rendering-mechanism.html#render-pipeline ?
+
+\subsection*{MVVM}
+In Vue.js findet das MVVM-Pattern anwendung.
+Das Sogenannte \emph{ViewModel} übernimmt die Vermittlung zwischen der View
+und der Daten mit Businesslogik im Model.
+Die Aufgabe des ViewModels übernimmt Vue.\cite[S. 43]{steyer2019}\footnote{In der Quelle ist die Rede von "MVVC". Aus dem Kontext ist klar, dass es sich um einen Tippfehler handelt und "MVVM" gemeint ist.}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{img/mvvm}
+  \caption{MVVM in Vue \cite{gettingStarted012}}
+  \label{fig:mvvm}
+\end{figure}
+
 % ----------------------------------------------------------------------------
