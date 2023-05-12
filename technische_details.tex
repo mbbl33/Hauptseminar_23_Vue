@@ -198,6 +198,7 @@ Diese Komponente kann dann mit einem Alias im Script-Teile einer anderen Kompone
 registriert werden.
 Nach dem Registrieren kann der Alias als Tag für die importierte Komponente verwendet werden. \cite{vueComponents}
 
+\newpage
 
 \begin{lstlisting}[caption={Komponente als JavaScript-Objekt},language=javascript,label={lst:Komponente als JavaScript-Objekt}]
 export default {
@@ -248,6 +249,8 @@ app.component('ButtonStatusChecker', ButtonStatusChecker)
 Um Daten an eine Komponente weiter zugeben, gibt es die \emph{probs}-Option beim Erstellen einer Komponente.
 Das \emph{probs}-Attribut erhält einen Namen, über die es dann später in
 HTML angesteuert werden kann. \cite{vueComponents}
+
+\newpage
 
 \begin{lstlisting}[caption={Erstellung eines \emph{probs}},language=javascript,label={lst:Erstellung eines probs}]
 <script>
@@ -556,7 +559,7 @@ Die Aufgabe des ViewModels übernimmt Vue.\cite[S. 43]{steyer2019}\footnote{In d
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\textwidth]{img/mvvm}
+  \includegraphics[width=0.8\textwidth]{img/mvvm}
   \caption{MVVM in Vue \cite{gettingStarted012}}
   \label{fig:mvvm}
 \end{figure}
