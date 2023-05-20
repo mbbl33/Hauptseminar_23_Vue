@@ -8,12 +8,12 @@ Es wird ein Überblick gezeigt von verschiedenen in Vue.js vorhandenen Elementen
 und es wird auf diese anhand von Beispielen genauer eingegangen.
 Ich beziehe mich dabei auf Vue 3.
 Aufgrund der Kürze der Arbeit und des Funktionsumfangs von Vue.js ist es nicht mögliche alle Features abzudecken.
-Das Kapitel dient mehr dazu dem Leser einen ersten Eindruck von Vue.js zu geben.
+Das Kapitel dient dazu dem Leser einen ersten Eindruck von Vue.js zu geben.
 
 
 \section{Options API vs. Composition API}\label{sec:options-api-and-composition-api}
-Vue organisiert einzelne Komponenten als \emph{Single-File Components (SFC)},
-die im HTML-ähnlichen Dateiformat mit der Dateiendung \lstinline{.vue} vorliegen.
+Vue.js organisiert einzelne Komponenten als \emph{Single-File Components (SFC)},
+die im HTML-ähnlichen Dateiformat mit der Dateiendung \emph{.vue} vorliegen.
 In einem SFC werden Aussehen, Struktur und Logik einer Komponente gebündelt, bestehend aus HTML-, CSS- und JavaScript-Elementen.
 Für den Aufbau einer solchen SFC gibt es seit Vue 3 zwei verschiedene Möglichkeiten.
 Zum einen gibt es die \emph{Options API} und zum anderen die \emph{Composition API}. \cite{vueIntroduction}
@@ -21,17 +21,17 @@ Zum einen gibt es die \emph{Options API} und zum anderen die \emph{Composition A
 \subsection*{Options API}
 Die länger vorhandene Variante ist die Options API.
 Bei der Options API wird für die Komponente ein JavaScript Objekt angelegt.
-Das Objekt kann verschiedene Optionen enthalten, darunter \lstinline{data} für Daten, \lstinline{methods} für Methoden und auch Lifecycle-hooks wie \lstinline{mounted}.
+Das Objekt kann verschiedene Optionen enthalten, darunter \emph{data} für Daten, \emph{methods} für Methoden und auch Lifecycle-hooks wie \emph{mounted}.
 \cite{vueIntroduction}
 
 \subsection*{Composition API}
 Die Composition API kam mit Vue 3 hinzu und wurde später für Vue 2 nachgereicht \cite{vueFAQ}.
-Bei der Verwendung der Composition API wird in einem \lstinline{import}-Statement
+Bei der Verwendung der Composition API wird in einem \emph{import}-Statement
 die benötigten API-Features wie zum Beispiel Lifecycle-hooks angegeben.
-Der Code bei Verwendung der Composition API wird in der Regel zwischen einem \lstinline{<script setup>} Tag verwendet.
-Mit dem Tag wird angegeben, dass zur Compilezeite eine Transformation durch geführt werden soll,
-die Composition API mit weniger Redundanz im Code zu nutzen.
-So können Variablen und Funktionen direkt im Template genutzt werden.
+Der Code bei Verwendung der Composition API wird in der Regel zwischen einem \emph{<script setup>} Tag verwendet.
+Durch die Verwendung des Tags wird zur Compilezeit eine Transformation durchgeführt,
+die es ermöglicht, die Composition API mit weniger redundantem Code zu nutzen.
+Somit ist es möglich Variablen und Funktionen direkt im Template zu verwenden.
 \cite{vueIntroduction}
 
 \subsection*{Gegenüberstellung}
@@ -109,7 +109,7 @@ onUpdated(() => {
     \end{lstlisting}
 \end{minipage}
 
-In Vue können beide APIs ohne Einschränkung genutzt werden.
+In Vue.js können beide APIs ohne Einschränkung genutzt werden.
 In \ref{lst:OptionsAPI} und \ref{lst:CompositionAPI} sehen wir zwei gleichwertige
 Beispiele, umgesetzt mit jeweils einer der APIs.
 Es werden Veränderungen im Lifecycle auf der Konsole ausgegeben und es wird festgehalten, ob ein Button gedrückt wurde.
@@ -128,19 +128,19 @@ wartbarere Composition API sinnvoll ist.
 
 \section{Direktiven in Vue.js}\label{sec:direktiven-in-vue.js}
 Direktiven beschreiben ein gewünschtes Verhalten in der View.
-In Vue beginnen diese Direktiven mit \emph{v-}.
-Vue bietet einige vordefinierte Direktiven wie v-for, v-if, v-else, v-show, v-on, v-slot, v-bind
+In Vue.js beginnen diese Direktiven mit \emph{v-}.
+Vue.js bietet einige vordefinierte Direktiven wie v-for, v-if, v-else, v-show, v-on, v-slot, v-bind
 und v-model, bietet aber auch die Möglichkeit, eigene Direktiven zu erstellen. \cite[S. 10]{steyer2019}
 \\
 Ich möchte mich hier auf ein paar der vordefinierten Direktiven beschränken.
 Eine Liste aller Direktiven\footnote{\url{https://vuejs.org/api/built-in-directives.html}}
 und wie man eigene Direktiven\footnote{\url{https://vuejs.org/guide/reusability/custom-directives.html}}
-erstellt sind in der Dokumentation von Vue zu finden.
+erstellt sind in der Dokumentation von Vue.js zu finden.
 Auf Direktiven zur Datenbindung gehe ich an passenderer Stelle in Abschnitt \ref{sec:datenbindung-in-vue.js} ein.
 
 
 \subsection*{v-for}
-\emph{v-for} funktioniert wie eine klassische foreach-Schleife.
+\emph{v-for} funktioniert wie eine foreach-Schleife.
 Die \emph{v-for}-Direktive ermöglicht es über eine Sammlung von Werten zu iterieren und die Daten in der View zu nutzen.
 Erlaubte Datentypen sind Array, Object, number, string und solche, die das Interface Iterable implementieren. \cite{vueDirectives}
 \begin{lstlisting}[caption={\emph{v-for}-Direktive},language=html, label={lst:v-for}]
@@ -152,7 +152,7 @@ Erlaubte Datentypen sind Array, Object, number, string und solche, die das Inter
 %\newpage
 
 \subsection*{v-if}
-Die Direktive \emph{v-if} funktioniert ähnlich der eines klassischen if-Statements in der Programmierung.
+Die Direktive \emph{v-if} funktioniert ähnlich wie ein if-Statement in der Programmierung.
 \emph{v-if} prüft anhand des übergebenen Wahrheitswerts, ob ein HTML-Element angezeigt werden soll.
 Mit der Verwendung von \emph{v-if} können Alternativen mit \emph{v-else} für den Fall, dass die Bedingung nicht erfüllt ist,
 oder mit \emph{v-else-if} für eine bedingte Alternative ergänzt werden.
@@ -179,7 +179,7 @@ Darüber hinaus gibt es noch Modifier, die das zu erwartende Event präzisieren.
 \begin{lstlisting}[caption={\emph{v-on}-Direktive},language=html, label={lst:v-on}]
 <button v-on:click="buttonClicked"></button>
 <button @click="buttonClickedButShortHand"></button>
-<button v-on:click.richt="buttonRightClicked"></button>
+<button v-on:click.right="buttonRightClicked"></button>
 \end{lstlisting}
 
 %\newpage
@@ -187,20 +187,20 @@ Darüber hinaus gibt es noch Modifier, die das zu erwartende Event präzisieren.
 \section{Komponenten in Vue.js}\label{sec:komponenten-in-vue.js}
 Komponenten sind wiederverwendbare Bausteine.
 Die Komponenten können beliebig oft in der View verwendet werden und im Model unabhängig angesteuert werden.
-Vue bietet die Möglichkeit Komponenten selbst zu definieren aus HTML, CSS, sowie JavaScript und sie später mit einem
+Vue.js bietet die Möglichkeit Komponenten selbst zu definieren aus HTML, CSS, sowie JavaScript und sie später mit einem
 eigen definierten HTML-Tag anzusteuern. \cite[S. 11-12]{steyer2019}
 \\
-Wie in Abschnitt \ref{sec:options-api-and-composition-api} bereits erwähnt, werden in Vue Komponenten normalerweise als SFC geschrieben.
-Eine Komponente kann wie in Abschnitt \ref{sec:options-api-and-composition-api} erwähnt und wie in Listings \ref{lst:CompositionAPI} oder \ref{lst:OptionsAPI}
+Wie in Abschnitt \ref{sec:options-api-and-composition-api} bereits erwähnt, werden in Vue.js Komponenten normalerweise als SFC geschrieben.
+Eine Komponente kann wie in Abschnitt \ref{sec:options-api-and-composition-api} erwähnt mit Composition API oder Options API
 erstellt werden.
-Alternative kann man die Komponente als JavaScript-Objekt erstellen, um den Build-Schritt zu umgehen (siehe Listing \ref{lst:Komponente als JavaScript-Objekt}).
-Diese Komponente kann dann mit einem Alias im Script-Teile einer anderen Komponente importiert werden und muss dort noch als Komponente
+Alternative kann man die Komponente als JavaScript Objekt erstellen, um den Build-Schritt zu umgehen (siehe Listing \ref{lst:Komponente als JavaScript-Objekt}).
+Eine Komponente kann dann mit einem Alias im Script-Teile einer anderen Komponente importiert werden und muss dort noch als Komponente
 registriert werden.
 Nach dem Registrieren kann der Alias als Tag für die importierte Komponente verwendet werden. \cite{vueComponents}
 
 \newpage
 
-\begin{lstlisting}[caption={Komponente als JavaScript-Objekt},language=javascript,label={lst:Komponente als JavaScript-Objekt}]
+\begin{lstlisting}[caption={Komponente als JavaScript Objekt},language=javascript,label={lst:Komponente als JavaScript-Objekt}]
 export default {
   data() {
     return {
@@ -268,9 +268,9 @@ export default {
 <Paragraph text="Hallo Welt" />
 \end{lstlisting}
 
-Abgesehen von den bereits aufgezählten Features, bietet Vue für Komponenten weitere Features wie die Möglichkeit auf Events zu reagieren,
-Inhalte mittels \emph{<slot>} einer Komponente zu übergeben und die Verwendung dynamischer Komponenten.
-Eine Anleitung zur Verwendung dieser Features ist in der Vue Dokumentation nachzulesen\footnote{\url{https://vuejs.org/guide/essentials/component-basics.html}}.
+Abgesehen von den bereits aufgezählten Features, bietet Vue.js für Komponenten weitere Features wie die Möglichkeit auf Events zu reagieren,
+die Verwendung dynamischer Komponenten, Inhalte mittels \emph{<slot>} einer Komponente zu übergeben und .
+Eine Anleitung zur Verwendung dieser Features ist in der Vue.js Dokumentation nachzulesen\footnote{\url{https://vuejs.org/guide/essentials/component-basics.html}}.
 \cite{vueComponents}
 
 %\newpage
@@ -279,7 +279,7 @@ Eine Anleitung zur Verwendung dieser Features ist in der Vue Dokumentation nachz
 Das Binding ist einer der Hauptaufgaben eines Frontend Frameworks.
 Beim Binding geht es darum, Daten von View und Model aneinander zubinden. \cite[S. 11]{steyer2019}
 \subsection*{Mustache-Syntax}
-Die einfachste Form der Datenbindung in Vue ist mit der auch aus anderen Frameworks bekannte Mustache-Syntax möglich.
+Die einfachste Form der Datenbindung in Vue.js ist mit der auch aus anderen Frameworks bekannte Mustache-Syntax möglich.
 Bei der Mustache-Syntax wird ein Variablenname aus dem Modell der Komponente zwischen zwei geschweiften Klammern gesetzt.
 Angezeigt wird dann die aktuelle String-Repräsentation des Wertes.
 Die Mustache-Syntax ist unidirektionale vom Modell zur View. \cite{vueTemplateSyntax}
@@ -340,7 +340,7 @@ export default {
 \subsection*{v-bind}
 Möchte man Daten an HTML-Attribute binden, ist dies mit der \emph{v-bind}-Direktive möglich.
 Da \emph{v-bind} eine häufig genutzte Direktive ist, gibt es eine Kurzform,
-die einfach nur aus einem vorangestellten Doppelpunkt besteht. \cite{vueTemplateSyntax}
+die aus einem vorangestellten Doppelpunkt besteht. \cite{vueTemplateSyntax}
 \begin{lstlisting}[caption={\emph{v-bind}-Direktive},language=javascript, label={lst:v-bind-Direktive}]
 <script>
 export default {
@@ -368,8 +368,8 @@ für bidirektionales Binding gibt es die \emph{v-model}-Direktive.
 Die \emph{v-model}-Direktive ist eine Verbindung aus \emph{v-on}-Direktive
 und \emph{v-bind}-Direktive.
 Mit der \emph{v-bind}-Direktive ist es zum Beispiel möglich, vorausgefüllte Inputfelder zu erstellen.
-Bei Eingabe in das Inputfeld wird entsprechend das Datenfeld im Modell updatet
-und bei Änderungen im Model wird der Text im Inputfeld upgedatet. \cite{vueComponentV-model}
+Bei Eingabe in das Inputfeld wird entsprechend das Datenfeld im Modell aktualisiert
+und bei Änderungen im Modell wird der Text im Inputfeld aktualisiert^. \cite{vueComponentV-model}
 \begin{lstlisting}[caption={\emph{v-model}-Direktive},language=javascript, label={lst:v-model-Direktive}]
 <script>
 export default {
@@ -389,16 +389,16 @@ export default {
 Für das Routing muss man zwischen Multi-Page und Single-Page Anwendungen unterscheiden.
 Bei einer Multi-Page Anwendung (MPA) erfolgt das Aufrufen einer neuen Unterseite über die Kommunikation
 mit dem Server, die Seite wird dann serverseitig gerendert.
-Bei MPA handelt es sich um einen älteren \emph{klassischen} Ansatz.\cite[S. 262]{kaluvza2018comparison}
+Bei MPA handelt es sich um einen älteren Ansatz.\cite[S. 262]{kaluvza2018comparison}
 \\
-In Vue wird der Ansatz der Single-Page Anwendung (SPA) verfolgt.
+In Vue.js wird der Ansatz der Single-Page Anwendung (SPA) verfolgt.
 Bei Single-Page Anwendungen existieren Unterseiten nur simuliert und
 die Inhalte einer einzelnen Seite werden mithilfe von JavaScript ausgetauscht. \cite[S. 174-175]{peterke2019}
 \subsection*{Installation}
-Der offizielle Router von Vue ist nicht Teil des Vue-Kerns und
+Der offizielle Router von Vue.js ist nicht Teil des Vue-Kerns und
 muss daher bei Bedarf gesondert installiert werden.
 Die aktuelle mit Vue 3 kompatible Router-Version ist Version 4 und
-kann über npm mit dem Befehl \lstinline{npm install vue-router@4} installiert werden.\cite{vueRouterInstallation}
+kann über npm mit dem Befehl \emph{npm install vue-router@4} installiert werden.\cite{vueRouterInstallation}
 
 %\newpage
 
@@ -431,9 +431,9 @@ app.mount('#app')
 \end{lstlisting}
 
 \subsection*{Verwendung des Routers}
-Um den Router zu verwenden und auf eine neue unterseite zu verlinken,
+Um den Router zu verwenden und auf eine neue Unterseite zu verlinken,
 gibt es den HTML-Tag \emph{router-link}, mit dem Attribut \emph{to} kann dann der gewünschte Pfad angegeben werden.
-Wie bereits erwähnt verwendet man Vue in der Regel für SPA, in denen ein Seitenwechsel nur simuliert stattfindet.
+Wie bereits erwähnt verwendet man Vue.js in der Regel für SPA, in denen ein Seitenwechsel nur simuliert stattfindet.
 Mit dem HTML-Tag \emph{router-view} gibt man den Bereich der Seite an, in dem beim Aufrufen eines Links die neue Komponente gerendert werden soll.
 Um diesen \emph{router-view}-Tag herum können dann Elemente, die immer zu sehen sein sollen, angelegt werden. \cite{vueRouterGettingStarted}
 
@@ -446,9 +446,9 @@ Um diesen \emph{router-view}-Tag herum können dann Elemente, die immer zu sehen
 \end{lstlisting}
 
 \subsection*{Routing mit Parametern}
-Möchte man in Vue Daten an eine aufgerufene Komponente übergeben, bietet Vue die Möglichkeit,
+Möchte man in Vue.js Daten an eine aufgerufene Komponente übergeben, bietet Vue.js die Möglichkeit,
 dies via Parameter im Pfad zu machen.
-Um einen Parameter zu verwenden, muss man diesen beim Erstellen der Routen mit vorangestelltem \lstinline{:} angeben.
+Um einen Parameter zu verwenden, muss man diesen beim Erstellen der Routen mit vorangestelltem \emph{:} angeben.
 In der Komponente kann er dann wie in Listing \ref{lst:Zugriff-auf-Routingparameter} verwendet werden. \cite{vueRouterDynamicRouteMatching}
 \begin{lstlisting}[caption={Route mit Parameter},language=javascript,label={lst:Route-mit-Parameter}]
 const routes = [
@@ -461,13 +461,13 @@ $route.params.id
 \end{lstlisting}
 
 \subsection*{Weitere Routing-Features}
-Weitere Features, die in Vue mithilfe des Routers genutzt werden können,
+Weitere Features, die in Vue.js mithilfe des Routers genutzt werden können,
 sind unter anderem die Verwendung von Nested Routes\footnote{\url{https://router.vuejs.org/guide/essentials/nested-routes.html}}
 und das Ändern des History-Modes\footnote{\url{https://router.vuejs.org/guide/essentials/history-mode.html}} beim Erstellen des Routers.
 Diese Features und weitere Features sind ausführlich in der Dokumentation des Vue-Routers beschrieben.
 
 \section{State Management in Vue.js}\label{sec:state-management-in-vue.js}
-In Vue besitzt jede Komponente ihren eigenen State, sowie eine View und Actions.
+In Vue.js besitzt jede Komponente ihren eigenen State, sowie eine View und Actions.
 \begin{lstlisting}[caption={State, View und Actions},language=javascript,label={lst:State-View-und-Actions}]
 <script>
 export default {
@@ -495,7 +495,7 @@ export default {
 
 Der Begriff \emph{State} bezieht sich auf den Zustand von Daten und somit auf ihren aktuellen Wert.
 Möchte man von aus verschiedenen Komponenten auf denselben State zugreifen,
-biete Vue mit der Reactivity API eine Möglichkeit für einfaches State Management.
+biete Vue.js mit der Reactivity API eine Möglichkeit für einfaches State Management.
 Mit der Reactivity API kann man einen Store anlegen, welcher den State enthält.
 Der Store kann, dann in den Komponenten wo er benötigt wird, importiert werden.
 Aus Gründen der Wartbarkeit des Codes empfiehlt es sich nicht den State lokal in einer Komponente anzupassen,
@@ -522,7 +522,7 @@ export const store = reactive({
 
 Für komplexeres State Management wird die offizielle State Management Library \emph{Pina} empfohlen.
 Pina bietet unter anderem die Vorteile serverseitiges Rendering zu unterstützen und
-ermöglicht ein besseres Debugging durch eine Integration in die Vue DevTools.
+ermöglicht ein besseres Debugging durch eine Integration in die Vue-DevTools.
 Pina löste Vuex als offizielle State Management Library ab und bietet unter anderem gegenüber von Vuex
 die Möglichkeit mehrere Stores zu haben und eine einfachere Anwendung.  \cite{vueStateManagement}
 
@@ -539,8 +539,8 @@ die Komponenten auf einer Ebene zu belassen. \cite{largeScaleVue}
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.4\textwidth]{img/vueFileStructure}
-  \caption{File Struktur von Vue}
-  \label{fig:vueFileStructure}
+  \caption{Projektstruktur}
+  \label{fig:vueProjektstruktur}
 \end{figure}
 
 \subsection*{Der virtuelle DOM}
@@ -555,12 +555,12 @@ bevor der reelle DOM angepasst wird. \cite[S. 10-11]{steyer2019} %TODO https://v
 In Vue.js findet das MVVM-Pattern Anwendung.
 Das sogenannte \emph{ViewModel} übernimmt die Vermittlung zwischen der View
 und der Daten mit Businesslogik im Model.
-Die Aufgabe des ViewModels übernimmt Vue.\cite[S. 43]{steyer2019}\footnote{In der Quelle ist die Rede von "MVVC". Aus dem Kontext ist klar, dass es sich um einen Tippfehler handelt und "MVVM" gemeint ist.}
+Die Aufgabe des ViewModels übernimmt Vue.js.\cite[S. 43]{steyer2019}\footnote{In der Quelle ist die Rede von "MVVC". Aus dem Kontext ist klar, dass es sich um einen Tippfehler handelt und "MVVM" gemeint ist.}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{img/mvvm}
-  \caption{MVVM in Vue \cite{gettingStarted012}}
+  \caption{MVVM in Vue.js \cite{gettingStarted012}}
   \label{fig:mvvm}
 \end{figure}
 

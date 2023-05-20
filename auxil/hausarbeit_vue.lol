@@ -7,7 +7,7 @@
 \contentsline {lstlisting}{\numberline {3.3}\emph {v-for}-Direktive}{9}{lstlisting.3.3}%
 \contentsline {lstlisting}{\numberline {3.4}\emph {v-if}-Direktive}{10}{lstlisting.3.4}%
 \contentsline {lstlisting}{\numberline {3.5}\emph {v-on}-Direktive}{10}{lstlisting.3.5}%
-\contentsline {lstlisting}{\numberline {3.6}Komponente als JavaScript-Objekt}{11}{lstlisting.3.6}%
+\contentsline {lstlisting}{\numberline {3.6}Komponente als JavaScript Objekt}{11}{lstlisting.3.6}%
 \contentsline {lstlisting}{\numberline {3.7}Verwendung einer Komponente}{11}{lstlisting.3.7}%
 \contentsline {lstlisting}{\numberline {3.8}Globale Registrierung einer Komponente}{11}{lstlisting.3.8}%
 \contentsline {lstlisting}{\numberline {3.9}Erstellung eines \emph {probs}}{12}{lstlisting.3.9}%
