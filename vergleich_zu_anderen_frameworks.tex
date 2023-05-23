@@ -6,43 +6,44 @@
 
 
 \section{Einführung in den Vergleich}
-Für eine Gegenüberstellung mit Angular habe ich jeweils in Vue.js und in Angular eine
+Für eine Gegenüberstellung mit Angular wurde jeweils in Vue.js und in Angular eine
 simple Einkaufslistenapp erstellt.
-Das Ziel war es, mit beiden Frameworks eine möglichst äquivalente Einkaufslisten-App zu entwickeln und
-so von beiden Frameworks einen direkten Vergleich zubekommen.
+Das Ziel war es, mit beiden Frameworks eine möglichst ähnliche Einkaufslistenapp zu entwickeln und
+so von beiden Frameworks einen direkten Vergleich zu erstellen.
 Die App besteht aus zwei Seiten: einer Checklisten-Seite und einer Seite zur Erstellung und Bearbeitung der Einträge.
 
 Die Checklisten-Seite enthält eine Liste mit Mengenangaben der einzukaufenden Artikel und ermöglicht es dem Benutzer, die Artikel abzuhaken.
 Auf der Bearbeiten-Seite können Artikel mit Mengenangaben erstellt, bearbeitet und gelöscht werden.
 Für diese Gegenüberstellung wurde auf ein Backend und auf aufwändiges Design verzichtet.
-Ein Screenshot der beiden Seiten (siehe Abbildung \ref{fig:checklistenseite} und \ref{fig:editlistenseite}) und die Links zu den GitHub Repositorys der beiden Apps befinden sich im Anhang.
+Ein Screenshot der beiden Seiten (siehe Abbildung \ref{fig:checklistenseite} und \ref{fig:editlistenseite}) und die Links zu den GitHub Repositories der beiden Apps befinden sich im Anhang.
 
 
 \section{Gegenüberstellung von Vue.js und Angular anhand einer einfachen App}
-Zunächst möchte ich einmal auf die Ähnlichkeiten zwischen beiden Frameworks eingehen, die mir beim Entwickeln der Einkaufslistenapp aufgefallen sind.
-Beide Frameworks haben ähnliche Direktiven wie zum Beispiel \emph{v-model} und \emph{[(ngModel)]} oder \emph{v-for} und \emph{*ngFor},
-die in ihrer verwendung fast gleich sind.
+Zunächst wird auf die Ähnlichkeiten zwischen beiden Frameworks eingegangen, die beim Entwickeln der Einkaufslistenapp aufgefallen sind.
+Beide Frameworks haben ähnliche Direktiven wie zum Beispiel \texttt{v-model} und \texttt{[(ngModel)]} oder \texttt{v-for} und \texttt{*ngFor},
+die in ihrer Verwendung fast gleich sind.
 Die beiden Frameworks ermöglichen unidirektionale Datenbindung mit der Mustache-Syntax.
 Das Routing ist bei beiden Frameworks nicht standardmäßig vorhanden.
 Bei Angular muss das Routing erst aktiviert werden, in Vue.js muss die Routing-Erweiterung installiert werden.
-Die Verwendung des Routers ist bei beiden ähnlich, man legt den Pfad mit der zugehörigen Komponente in einem Array fest
+Die Verwendung des Routers ist bei beiden ähnlich.
+Man legt den Pfad mit der zugehörigen Komponente in einem Array fest
 und übergibt dies abschließend der App-Instanz.
-Mit einem \emph{router-outlet}-Tag in Angular oder einem \emph{RouterView}-Tag in Vue.js wird dann angegeben wo die aktuelle Route gerendert werden soll.
-Sowohl Vue.js als auch Angular bieten bereits beim Aufsetzen des Projekts die Möglichkeit das Routing zu ergänzen.
+Mit einem \texttt{<router-outlet>}-Tag in Angular oder einem \texttt{<RouterView>}-Tag in Vue.js wird dann angegeben, wo die aktuelle Route gerendert werden soll.
+Sowohl Vue.js als auch Angular bieten bereits beim Erstellen des Projekts die Möglichkeit, das Routing zu ergänzen.
 Während in Vue.js in der Regel mit SFC gearbeitet wird, besteht in Angular eine Komponente aus vier Dateien.
-Die vier Dateien einer Angular Komponente unterteilen sich in eine TypeScript- , eine HTML-, eine Style- und einer Verwaltungsdatei.
-In Vue.js legt man für eine neue Komponente eine neue \emph{.vue}-Datei an,
+Die vier Dateien einer Angular Komponente unterteilen sich in eine TypeScript-, eine HTML-, eine Style- und einer Verwaltungsdatei.
+In Vue.js legt man für eine neue Komponente eine neue \texttt{.vue}-Datei an,
 in Angular erfolgt es über die Angular CLI, welche einen Ordner mit den vier Dateien generiert.
-Für die Einkauflisten-App sollte der Inhalt der Liste zentral sein, damit sowohl von der Checklisten-Seite als auch von der Bearbeiten-Seite
+Für die Einkauflistenapp sollte der Inhalt der Liste zentral sein, damit sowohl von der Checklisten-Seite als auch von der Bearbeiten-Seite
 auf die Einträge zugegriffen werden kann.
-In Vue.js ist dies mit dem in Abschnitt \ref{sec:state-management-in-vue.js} erwähnten Pina möglich.
-Mit Pina konnte ich einen Store für die Einkaufliste mit den darin enthaltenen Items erstellen.
+In Vue.js ist dies mit dem in Abschnitt \ref{sec:state-management-in-vue.js} erwähnten Pinia möglich.
+Mit Pinia wurde eine Store für die Einkaufliste mit den darin enthaltenen Items erstellt.
 Auf den Einkaufslisten-Store kann dann von der Checklisten-Seite und der Bearbeiten-Seite zugegriffen werden.
-In Angular habe ich es mit einem Service gelöst.
+In Angular wurde es mit einem Service gelöst.
 Der erstellte Service in Angular ermöglicht einen gleichwertigen zentralen Zugriff.
 \\
 Auffällig ist der Größenunterschied der beiden Projektordner.
-Die Implementierung mit Vue.js hat 29 MB, dagegen hat die Implementierung mit Angular eine größe von 370 MB.
+Die Implementierung mit Vue.js hat 29 MB, dagegen hat die Implementierung mit Angular eine Größe von 370 MB.
 Der Entwicklungsserver der Vue.js Implementierung braucht 127 MB Arbeitsspeicher, für den Entwicklungsserver der Angular Implementierung
 werden 460 MB Arbeitsspeicher beansprucht.
 
