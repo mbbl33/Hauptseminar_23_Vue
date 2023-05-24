@@ -188,7 +188,7 @@ Darüber hinaus gibt es noch Modifier, die das zu erwartende Event präzisieren.
 Komponenten sind wiederverwendbare Bausteine.
 Die Komponenten können beliebig oft in der View verwendet werden und im Model unabhängig angesteuert werden.
 Vue.js bietet die Möglichkeit, Komponenten selbst aus HTML, CSS, sowie JavaScript zu definieren und sie später mit einem
-selbst  definierten HTML-Tag anzusteuern. \cite[S. 11-12]{steyer2019}
+selbst definierten HTML-Tag anzusteuern. \cite[S. 11-12]{steyer2019}
 \\
 Wie in Abschnitt \ref{sec:options-api-and-composition-api} bereits erwähnt, werden in Vue.js Komponenten normalerweise als SFC geschrieben.
 Eine Komponente kann wie in Abschnitt \ref{sec:options-api-and-composition-api} erwähnt mit Composition API oder Options API
@@ -269,7 +269,7 @@ export default {
 \end{lstlisting}
 
 Abgesehen von den bereits aufgezählten Features, bietet Vue.js für Komponenten weitere Features wie die Möglichkeit auf Events zu reagieren,
-die Verwendung dynamischer Komponenten und Inhalte mittels \texttt{<slot>} einer Komponente zu übergeben.
+die Verwendung dynamischer Komponenten und Inhalte mittels \texttt{<slot>} an eine Komponente zu übergeben.
 Eine Anleitung zur Verwendung dieser Features ist in der Vue.js Dokumentation nachzulesen\footnote{\url{https://vuejs.org/guide/essentials/component-basics.html}}.
 \cite{vueComponents}
 
@@ -281,7 +281,7 @@ Das Binding ist einer der Hauptaufgaben eines Frontend Frameworks.
 Beim Binding geht es darum, Daten von View und Model aneinander zubinden. \cite[S. 11]{steyer2019}
 \subsection*{Mustache-Syntax}
 Die einfachste Form der Datenbindung in Vue.js ist mit der auch aus anderen Frameworks bekannten Mustache-Syntax möglich.
-Bei der Mustache-Syntax wird ein Variablenname aus dem Modell in der Komponente zwischen zwei geschweiften Klammern gesetzt.
+Bei der Mustache-Syntax wird ein Variablenname aus dem Modell in der Komponente zwischen vier geschweifte Klammern gesetzt (siehe Listing \ref{lst:Mustache-Syntax}).
 Angezeigt wird dann die aktuelle String-Repräsentation des Wertes.
 Die Mustache-Syntax ist unidirektional vom Model zur View. \cite{vueTemplateSyntax}
 \begin{lstlisting}[caption={Mustache-Syntax},language=javascript, label={lst:Mustache-Syntax}]
@@ -387,6 +387,7 @@ export default {
 \end{lstlisting}
 
 \newpage
+
 
 \section{Routing in Vue.js}\label{sec:routing-in-vue.js}
 Für das Routing muss man zwischen Multi-Page und Single-Page Anwendungen unterscheiden.
@@ -497,7 +498,7 @@ export default {
 \end{lstlisting}
 
 Der Begriff \emph{State} bezieht sich auf den Zustand von Daten und somit auf ihren aktuellen Wert.
-Möchte man von aus verschiedenen Komponenten auf denselben State zugreifen,
+Möchte man von verschiedenen Komponenten auf denselben State zugreifen,
 biete Vue.js mit der Reactivity API eine Möglichkeit für einfaches State Management.
 Mit der Reactivity API kann man einen Store anlegen, welcher den State enthält.
 Der Store kann dann in den Komponenten, wo er benötigt wird, importiert werden.
